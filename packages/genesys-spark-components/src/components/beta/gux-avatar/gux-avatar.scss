@@ -1,0 +1,75 @@
+:host {
+  display: inline-block;
+  position: relative;
+}
+
+.gux-avatar {
+  box-sizing: content-box;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 4px;
+  background: white;
+  position: relative;
+  &.gux-large {
+    width: 96px;
+    height: 96px;
+  }
+
+  &.gux-medium {
+    width: 48px;
+    height: 48px;
+  }
+
+  &.gux-small {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.gux-xsmall {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.gux-status-ring {
+    background: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
+  }
+  & .initials {
+    display: flex;
+    color: white;
+    background-color: #115d71;
+    font-size: 32px;
+    height: -webkit-fill-available;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+::slotted(img) {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
