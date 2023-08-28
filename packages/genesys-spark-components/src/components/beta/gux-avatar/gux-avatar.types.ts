@@ -3,8 +3,10 @@ export type GuxAvatarStatus =
   | 'break'
   | 'busy'
   | 'notifications'
-  | 'online'
-  | 'off queue'
-  | 'out of office';
+  | 'offline'
+  | 'queue'
+  | 'outOfOffice';
 
 export type GuxAvatarSize = 'xsmall' | 'small' | 'medium' | 'large';
+
+export type GuxAvatarAccent = 'default' | 1 | 2 | 3 | 4 | 5;

@@ -7,14 +7,15 @@
 
 ## Properties
 
-| Property      | Attribute     | Description | Type                                                                                                | Default       |
-| ------------- | ------------- | ----------- | --------------------------------------------------------------------------------------------------- | ------------- |
-| `badge`       | `badge`       |             | `boolean`                                                                                           | `false`       |
-| `initials`    | `initials`    |             | `string`                                                                                            | `undefined`   |
-| `interactive` | `interactive` |             | `boolean`                                                                                           | `false`       |
-| `size`        | `size`        |             | `"large" \| "medium" \| "small" \| "xsmall"`                                                        | `'large'`     |
-| `status`      | `status`      |             | `"available" \| "break" \| "busy" \| "notifications" \| "off queue" \| "online" \| "out of office"` | `'available'` |
-| `statusRing`  | `status-ring` |             | `boolean`                                                                                           | `false`       |
+| Property      | Attribute     | Description | Type                                                                                           | Default       |
+| ------------- | ------------- | ----------- | ---------------------------------------------------------------------------------------------- | ------------- |
+| `accent`      | `accent`      |             | `"default" \| 1 \| 2 \| 3 \| 4 \| 5`                                                           | `'default'`   |
+| `badge`       | `badge`       |             | `boolean`                                                                                      | `false`       |
+| `initials`    | `initials`    |             | `string`                                                                                       | `undefined`   |
+| `interactive` | `interactive` |             | `boolean`                                                                                      | `false`       |
+| `size`        | `size`        |             | `"large" \| "medium" \| "small" \| "xsmall"`                                                   | `'large'`     |
+| `status`      | `status`      |             | `"available" \| "break" \| "busy" \| "notifications" \| "offline" \| "outOfOffice" \| "queue"` | `'available'` |
+| `statusRing`  | `status-ring` |             | `boolean`                                                                                      | `false`       |
 
 
 ## Slots

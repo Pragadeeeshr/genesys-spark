@@ -1,6 +1,10 @@
 import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
-import { GuxAvatarStatus, GuxAvatarSize } from './gux-avatar.types';
+import {
+  GuxAvatarStatus,
+  GuxAvatarSize,
+  GuxAvatarAccent
+} from './gux-avatar.types';
 import { hasSlot } from '@utils/dom/has-slot';
 
 /**
@@ -32,6 +36,9 @@ export class GuxAvatar {
   initials: string;
 
   @Prop()
+  accent: GuxAvatarAccent = 'default';
+
+  @Prop()
   badge: boolean = false;
 
   @Prop()
@@ -60,11 +67,18 @@ export class GuxAvatar {
             [`gux-${this.statusRing && 'status-ring'}`]: true
           }}
         >
-          {this.hasImageSlot ? (
-            <slot name="image"></slot>
-          ) : (
-            <div class="initials"></div>
-          )}
+          <div
+            class={{
+              content: true,
+              [`gux-accent-${this.accent}`]: true
+            }}
+          >
+            {this.hasImageSlot ? (
+              <slot name="image"></slot>
+            ) : (
+              <div class="initials">{this.initials}</div>
+            )}
+          </div>
         </div>
       </Fragment>
     );
