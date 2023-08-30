@@ -1,11 +1,4 @@
 :host {
-  --gse-ui-avatar-statusRing-large-border: 4px;
-  --gse-ui-avatar-statusRing-medium-border: 3px;
-  --gse-ui-avatar-statusRing-small-border: 2px;
-  --gse-ui-avatar-statusRing-xsmall-border: 2px;
-  --gse-ui-avatar-content-large-border-width: 2px;
-  --gse-ui-avatar-content-border-width: 1px;
-  --gse-ui-avatar-content-border-color: white;
   display: inline-block;
   position: relative;
   & button {
@@ -16,9 +9,21 @@
     border-radius: 50%;
     cursor: pointer;
     &:focus {
-      outline: var(--gse-semantic-color-focus) solid
-        var(--gse-semantic-focusRing-width);
+      outline-color: var(--gse-ui-avatar-focus);
+      outline-style: solid;
       outline-offset: var(--gse-semantic-focusRing-offset);
+      &:has(.gux-large) {
+        outline-width: var(--gse-ui-avatar-focusRing-large-border-width);
+      }
+      &:has(.gux-medium) {
+        outline-width: var(--gse-ui-avatar-focusRing-medium-border-width);
+      }
+      &:has(.gux-small) {
+        outline-width: var(--gse-ui-avatar-focusRing-small-border-width);
+      }
+      &:has(.gux-xsmall) {
+        outline-width: var(--gse-ui-avatar-focusRing-xsmall-border-width);
+      }
     }
   }
 }
@@ -31,9 +36,9 @@
     width: var(--gse-ui-avatar-large-size);
     height: var(--gse-ui-avatar-large-size);
     & .content {
-      height: calc(100% - var(--gse-ui-avatar-statusRing-large-border) * 2);
-      width: calc(100% - var(--gse-ui-avatar-statusRing-large-border) * 2);
-      margin: var(--gse-ui-avatar-statusRing-large-border);
+      height: calc(100% - var(--gse-ui-avatar-large-statusRing-width) * 2);
+      width: calc(100% - var(--gse-ui-avatar-large-statusRing-width) * 2);
+      margin: var(--gse-ui-avatar-large-statusRing-width);
       border-width: var(--gse-ui-avatar-content-large-border-width);
       font-size: var(--gse-ui-avatar-large-initials-fontSize);
     }
@@ -43,9 +48,9 @@
     width: var(--gse-ui-avatar-medium-size);
     height: var(--gse-ui-avatar-medium-size);
     & .content {
-      height: calc(100% - var(--gse-ui-avatar-statusRing-medium-border) * 2);
-      width: calc(100% - var(--gse-ui-avatar-statusRing-medium-border) * 2);
-      margin: var(--gse-ui-avatar-statusRing-medium-border);
+      height: calc(100% - var(--gse-ui-avatar-medium-statusRing-width) * 2);
+      width: calc(100% - var(--gse-ui-avatar-medium-statusRing-width) * 2);
+      margin: var(--gse-ui-avatar-medium-statusRing-width);
       font-size: var(--gse-ui-avatar-medium-initials-fontSize);
     }
   }
@@ -54,9 +59,9 @@
     width: var(--gse-ui-avatar-small-size);
     height: var(--gse-ui-avatar-small-size);
     & .content {
-      height: calc(100% - var(--gse-ui-avatar-statusRing-small-border) * 2);
-      width: calc(100% - var(--gse-ui-avatar-statusRing-small-border) * 2);
-      margin: var(--gse-ui-avatar-statusRing-small-border);
+      height: calc(100% - var(--gse-ui-avatar-small-statusRing-width) * 2);
+      width: calc(100% - var(--gse-ui-avatar-small-statusRing-width) * 2);
+      margin: var(--gse-ui-avatar-small-statusRing-width);
       font-size: var(--gse-ui-avatar-small-initials-fontSize);
     }
   }
@@ -65,9 +70,9 @@
     width: var(--gse-ui-avatar-xsmall-size);
     height: var(--gse-ui-avatar-xsmall-size);
     & .content {
-      height: calc(100% - var(--gse-ui-avatar-statusRing-xsmall-border) * 2);
-      width: calc(100% - var(--gse-ui-avatar-statusRing-xsmall-border) * 2);
-      margin: var(--gse-ui-avatar-statusRing-xsmall-border);
+      height: calc(100% - var(--gse-ui-avatar-xsmall-statusRing-width) * 2);
+      width: calc(100% - var(--gse-ui-avatar-xsmall-statusRing-width) * 2);
+      margin: var(--gse-ui-avatar-xsmall-statusRing-width);
       font-size: var(--gse-ui-avatar-xsmall-initials-fontSize);
     }
   }
@@ -107,8 +112,9 @@
   justify-content: center;
   border-radius: 50%;
   overflow: hidden;
-  border: var(--gse-ui-avatar-content-border-width) solid
-    var(--gse-ui-avatar-content-border-color);
+  border: var(--gse-ui-avatar-content-default-border-width)
+    var(--gse-ui-avatar-content-default-border-style)
+    var(--gse-ui-avatar-content-default-border-color);
   box-sizing: border-box;
   &.gux-accent-default {
     background-color: var(--gse-ui-avatar-media-initialsBackground-default);
