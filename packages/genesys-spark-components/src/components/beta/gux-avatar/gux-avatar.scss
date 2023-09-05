@@ -157,17 +157,6 @@
   }
 }
 
-.badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 24px;
-  height: 24px;
-  background-color: red;
-  border-radius: 50%;
-  z-index: 1;
-}
-
 ::slotted(img) {
   object-fit: cover;
   height: 100%;

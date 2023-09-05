@@ -39,9 +39,6 @@ export class GuxAvatar {
   accent: GuxAvatarAccent = 'default';
 
   @Prop()
-  badge: boolean = false;
-
-  @Prop()
   interactive: boolean = false;
 
   hasImageSlot: boolean;
@@ -54,11 +51,6 @@ export class GuxAvatar {
   render(): JSX.Element {
     const avatarContent = (
       <Fragment>
-        {this.badge && (
-          <div class="badge">
-            <gux-icon icon-name="fa/circle-check-solid" decorative></gux-icon>
-          </div>
-        )}
         <div
           class={{
             'gux-avatar': true,

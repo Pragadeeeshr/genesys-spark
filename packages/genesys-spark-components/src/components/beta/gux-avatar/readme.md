@@ -9,8 +9,7 @@
 
 | Property      | Attribute     | Description | Type                                                                                           | Default       |
 | ------------- | ------------- | ----------- | ---------------------------------------------------------------------------------------------- | ------------- |
-| `accent`      | `accent`      |             | `"default" \| 1 \| 2 \| 3 \| 4 \| 5`                                                           | `'default'`   |
-| `badge`       | `badge`       |             | `boolean`                                                                                      | `false`       |
+| `accent`      | `accent`      |             | `"default" \| 1 \| 10 \| 11 \| 12 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9`                     | `'default'`   |
 | `initials`    | `initials`    |             | `string`                                                                                       | `undefined`   |
 | `interactive` | `interactive` |             | `boolean`                                                                                      | `false`       |
 | `size`        | `size`        |             | `"large" \| "medium" \| "small" \| "xsmall"`                                                   | `'large'`     |
@@ -24,19 +23,6 @@
 | --------- | --------------- |
 | `"image"` | Headshot photo. |
 
-
-## Dependencies
-
-### Depends on
-
-- [gux-icon](../../stable/gux-icon)
-
-### Graph
-```mermaid
-graph TD;
-  gux-avatar-beta --> gux-icon
-  style gux-avatar-beta fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 
