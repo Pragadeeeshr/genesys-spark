@@ -17,28 +17,26 @@ This component is meant for use in other components as a dismiss button.
 ### Used by
 
  - [gux-modal](../gux-modal)
- - [gux-notification-toast-legacy](../../legacy/gux-notification-toast)
+ - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
  - [gux-popover](../gux-popover)
- - [gux-popover-beta](../../beta/gux-popover-beta)
  - [gux-popover-list](../gux-popover-list)
- - [gux-popover-list-beta](../../beta/gux-popover-list-beta)
- - [gux-simple-toast-legacy](../../legacy/gux-simple-toast)
+ - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
  - [gux-toast](../gux-toast)
 
 ### Depends on
 
+- [gux-button-slot-beta](../../beta/gux-button-slot)
 - [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-dismiss-button --> gux-button-slot-beta
   gux-dismiss-button --> gux-icon
   gux-modal --> gux-dismiss-button
   gux-notification-toast-legacy --> gux-dismiss-button
   gux-popover --> gux-dismiss-button
-  gux-popover-beta --> gux-dismiss-button
   gux-popover-list --> gux-dismiss-button
-  gux-popover-list-beta --> gux-dismiss-button
   gux-simple-toast-legacy --> gux-dismiss-button
   gux-toast --> gux-dismiss-button
   style gux-dismiss-button fill:#f9f,stroke:#333,stroke-width:4px
