@@ -65,17 +65,14 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-icon](../../gux-icon)
-- [gux-popover-list-beta](../../../beta/gux-popover-list-beta)
+- [gux-tooltip-title](../../gux-tooltip-title)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-tab-advanced --> gux-icon
-  gux-tab-advanced --> gux-popover-list-beta
-  gux-popover-list-beta --> gux-dismiss-button
-  gux-dismiss-button --> gux-icon
-  style gux-tab-advanced fill:#f9f,stroke:#333,stroke-width:4px
+  gux-tab-advanced-title --> gux-tooltip-title
+  gux-tooltip-title --> gux-tooltip
+  style gux-tab-advanced-title fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -1,12 +1,49 @@
+<gux-tabs-advanced allow-sort="true" id="interactive2">
+  <gux-tab-advanced-list slot="tab-list">
+    <gux-tab-advanced tab-id="tab1">
+      <gux-tab-advanced-title>Tab 1</gux-tab-advanced-title>
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="edit" decorative="true"></gux-icon>
+          Edit
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="clone" decorative="true"></gux-icon>
+          Clone
+        </gux-list-item>
+        <gux-list-item option-id="3" icon-name="share" onclick="notify(event)">
+          <gux-icon icon-name="share" decorative="true"></gux-icon>
+          Share
+        </gux-list-item>
+        <gux-list-item option-id="4" icon-name="download" onclick="notify(event)">
+          <gux-icon icon-name="download" decorative="true"></gux-icon>
+          Download
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced>
+    <gux-tab-advanced tab-id="tab2">
+      <gux-tab-advanced-title>Tab 2</gux-tab-advanced-title>
+    </gux-tab-advanced>
+  </gux-tab-advanced-list>
+  <gux-tab-advanced-panel tab-id="tab1">tab panel content for tab1
+  </gux-tab-advanced-panel>
+  <gux-tab-advanced-panel tab-id="tab2">tab panel content for tab2
+  </gux-tab-advanced-panel>
+</gux-tabs-advanced>
+
 <h1>gux-tabs-advanced</h1>
 <h2>Example 1 - no add tab button</h2>
-<gux-tabs-advanced>
-  <gux-tab-advanced-list slot="tab-list" show-new-tab-button="false">
+<gux-tabs-advanced show-new-tab-button="false">
+  <gux-tab-advanced-list slot="tab-list">
     <gux-tab-advanced tab-id="1-1">
-      <span id="tabTitle1">Tab Header 1</span>
+      <gux-tab-advanced-title><span id="tabTitle1">Tab Header 1</span></gux-tab-advanced-title>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="1-2">Tab Header 2</gux-tab-advanced>
-    <gux-tab-advanced tab-id="1-3">Tab Header 3</gux-tab-advanced>
+    <gux-tab-advanced tab-id="1-2"><gux-tab-advanced-title>Tab Header 2</gux-tab-advanced-title></gux-tab-advanced>
+    <gux-tab-advanced tab-id="1-3"><gux-tab-advanced-title>Tab Header 3</gux-tab-advanced-title></gux-tab-advanced>
   </gux-tab-advanced-list>
   <gux-tab-advanced-panel tab-id="1-1">
     <span>Tab content 1</span>
@@ -27,17 +64,17 @@
 <h2>Example 2 - add tab button (with text)</h2>
 <gux-tabs-advanced>
   <gux-tab-advanced-list slot="tab-list" tab-limit="10">
-    <gux-tab-advanced tab-id="2-1">Tab Header 1</gux-tab-advanced>
+    <gux-tab-advanced tab-id="2-1"><gux-tab-advanced-title>Tab Header 1</gux-tab-advanced-title></gux-tab-advanced>
     <gux-tab-advanced tab-id="2-2">
-      <span
-        >Tab Header 2 really long long long long long long long long long long
-        long long long</span
-      >
+      <gux-tab-advanced-title>
+        <span>Tab Header 2 really long long long long long long long long long long
+          long long long</span>
+      </gux-tab-advanced-title>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="2-3">Tab Header 3</gux-tab-advanced>
-    <gux-tab-advanced tab-id="2-4">Tab Header 4</gux-tab-advanced>
-    <gux-tab-advanced tab-id="2-5">Tab Header 5</gux-tab-advanced>
-    <gux-tab-advanced tab-id="2-6">Tab Header 6</gux-tab-advanced>
+    <gux-tab-advanced tab-id="2-3"><gux-tab-advanced-title>Tab Header 3</gux-tab-advanced-title></gux-tab-advanced>
+    <gux-tab-advanced tab-id="2-4"><gux-tab-advanced-title>Tab Header 4</gux-tab-advanced-title></gux-tab-advanced>
+    <gux-tab-advanced tab-id="2-5"><gux-tab-advanced-title>Tab Header 5</gux-tab-advanced-title></gux-tab-advanced>
+    <gux-tab-advanced tab-id="2-6"><gux-tab-advanced-title>Tab Header 6</gux-tab-advanced-title></gux-tab-advanced>
     <div slot="add-tab">
       <gux-icon icon-name="add" decorative></gux-icon>
       Add Tab
@@ -64,14 +101,16 @@
 </gux-tabs-advanced>
 
 <h2>Example 3 - tab overflow</h2>
-<div
-  style="width: 300px; overflow: auto; resize: both; border: 1px dotted black"
->
+<div style="width: 300px; overflow: auto; resize: both; border: 1px dotted black">
   <gux-tabs-advanced>
     <gux-tab-advanced-list slot="tab-list">
-      <gux-tab-advanced tab-id="3-1"> Tab Header 1 </gux-tab-advanced>
-      <gux-tab-advanced tab-id="3-2"> Tab Header 2 </gux-tab-advanced>
-      <gux-tab-advanced tab-id="3-3"> Tab Header 3 </gux-tab-advanced>
+      <gux-tab-advanced tab-id="3-1">
+        <gux-tab-advanced-title>
+          Tab Header 1
+        </gux-tab-advanced-title>
+      </gux-tab-advanced>
+      <gux-tab-advanced tab-id="3-2"><gux-tab-advanced-title>Tab Header 2</gux-tab-advanced-title></gux-tab-advanced>
+      <gux-tab-advanced tab-id="3-3"><gux-tab-advanced-title>Tab Header 3</gux-tab-advanced-title></gux-tab-advanced>
     </gux-tab-advanced-list>
     <gux-tab-advanced-panel tab-id="3-1">
       <span>Tab content 1</span>
@@ -86,15 +125,10 @@
 </div>
 
 <h2>Example 4 - dropdown options</h2>
-<gux-tabs-advanced>
-  <gux-tab-advanced-list
-    slot="tab-list"
-    allow-sort="true"
-    show-new-tab-button="true"
-    tab-limit="5"
-  >
+<gux-tabs-advanced show-new-tab-button="true">
+  <gux-tab-advanced-list slot="tab-list" allow-sort="true" tab-limit="5">
     <gux-tab-advanced tab-id="4-1">
-      Tab Header 1
+      <gux-tab-advanced-title>Tab Header 1</gux-tab-advanced-title>
       <gux-list slot="dropdown-options">
         <gux-list-item onclick="notify(event)">
           <gux-icon icon-name="edit" decorative="true"></gux-icon>
@@ -108,11 +142,7 @@
           <gux-icon icon-name="share" decorative="true"></gux-icon>
           Share
         </gux-list-item>
-        <gux-list-item
-          option-id="4"
-          icon-name="download"
-          onclick="notify(event)"
-        >
+        <gux-list-item option-id="4" icon-name="download" onclick="notify(event)">
           <gux-icon icon-name="download" decorative="true"></gux-icon>
           Download
         </gux-list-item>
@@ -123,7 +153,7 @@
       </gux-list>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="4-2">
-      Tab Header 2
+      <gux-tab-advanced-title>Tab Header 2</gux-tab-advanced-title>
       <gux-list slot="dropdown-options">
         <gux-list-item onclick="notify(event)">
           <gux-icon icon-name="edit" decorative="true"></gux-icon>
@@ -148,7 +178,7 @@
       </gux-list>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="4-3">
-      Tab Header 3
+      <gux-tab-advanced-title>Tab Header 3</gux-tab-advanced-title>
       <gux-list slot="dropdown-options">
         <gux-list-item onclick="notify(event)">
           <gux-icon icon-name="edit" decorative="true"></gux-icon>
@@ -173,7 +203,7 @@
       </gux-list>
     </gux-tab-advanced>
     <gux-tab-advanced gux-disabled tab-id="4-4">
-      Tab Header 4
+      <gux-tab-advanced-title>Tab Header 4</gux-tab-advanced-title>
       <gux-list slot="dropdown-options">
         <gux-list-item onclick="notify(event)">
           <gux-icon icon-name="edit" decorative="true"></gux-icon>
@@ -198,7 +228,7 @@
       </gux-list>
     </gux-tab-advanced>
     <gux-tab-advanced gux-disabled tab-id="4-5">
-      Tab Header 5
+      <gux-tab-advanced-title>Tab Header 5</gux-tab-advanced-title>
       <gux-list slot="dropdown-options">
         <gux-list-item onclick="notify(event)">
           <gux-icon icon-name="edit" decorative="true"></gux-icon>
@@ -241,20 +271,16 @@
 </gux-tabs-advanced>
 
 <h2>Example 5 - label with icon</h2>
-<gux-tabs-advanced>
-  <gux-tab-advanced-list
-    slot="tab-list"
-    allow-sort="false"
-    show-new-tab-button="true"
-    tab-limit="10"
-  >
+<gux-tabs-advanced show-new-tab-button="true">
+  <gux-tab-advanced-list slot="tab-list" allow-sort="false" tab-limit="10">
     <gux-tab-advanced tab-id="5-1">
-      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
-      Lock
+      <gux-tab-advanced-title><gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+        Lock</gux-tab-advanced-title>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="5-2">
-      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
-      Email
+      <gux-tab-advanced-title> <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+        Email</gux-tab-advanced-title>
+
       <gux-list slot="dropdown-options">
         <gux-list-item onclick="notify(event)">
           <gux-icon icon-name="close" decorative="true"></gux-icon>
@@ -263,13 +289,18 @@
       </gux-list>
     </gux-tab-advanced>
     <gux-tab-advanced gux-disabled tab-id="5-3">
-      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
-      Phone
+      <gux-tab-advanced-title>
+        <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+        Phone
+      </gux-tab-advanced-title>
+
     </gux-tab-advanced>
 
     <gux-tab-advanced tab-id="5-4">
-      <gux-icon icon-name="attachment" decorative="true"></gux-icon>
-      Attachment
+      <gux-tab-advanced-title>
+        <gux-icon icon-name="attachment" decorative="true"></gux-icon>
+        Attachment
+      </gux-tab-advanced-title>
       <gux-list slot="dropdown-options">
         <gux-list-item onclick="notify(event)">
           <gux-icon icon-name="close" decorative="true"></gux-icon>
@@ -278,8 +309,11 @@
       </gux-list>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="5-5">
-      <gux-icon icon-name="export" decorative="true"></gux-icon>
-      Export
+      <gux-tab-advanced-title>
+        <gux-icon icon-name="export" decorative="true"></gux-icon>
+        Export
+      </gux-tab-advanced-title>
+
     </gux-tab-advanced>
     <div slot="add-tab">
       <gux-icon icon-name="file-preview" decorative></gux-icon>
@@ -304,19 +338,17 @@
 </gux-tabs-advanced>
 
 <h2>Example 6 - dropdown options and no dropdown options</h2>
-<gux-tabs-advanced>
-  <gux-tab-advanced-list
-    slot="tab-list"
-    allow-sort="false"
-    show-new-tab-button="true"
-    tab-limit="10"
-  >
-    <gux-tab-advanced tab-id="6-1"> Tab Header 1 long long </gux-tab-advanced>
+<gux-tabs-advanced show-new-tab-button="true">
+  <gux-tab-advanced-list slot="tab-list" allow-sort="false"  tab-limit="10">
+    <gux-tab-advanced tab-id="6-1">
+      <gux-tab-advanced-title>Tab Header 1 long long</gux-tab-advanced-title>
+    </gux-tab-advanced>
     <gux-tab-advanced tab-id="6-2">
-      <span
-        >Tab Header 2
-        longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong</span
-      >
+      <gux-tab-advanced-title>
+        <span>Tab Header 2
+          longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong</span>
+  
+      </gux-tab-advanced-title>
       <gux-list slot="dropdown-options">
         <gux-list-item onclick="notify(event)">
           <gux-icon icon-name="close" decorative="true"></gux-icon>
@@ -337,8 +369,7 @@
   </gux-tab-advanced-panel>
 </gux-tabs-advanced>
 
-<style
-  onload="(function () {
+<style onload="(function () {
     document.querySelector(`gux-tab-advanced-panel[tab-id='1-1']`).addEventListener('guxactivepanelchange',
     (event) => {
       const currentTime = new Date().toLocaleTimeString();
@@ -362,8 +393,7 @@
       }
     })
   }
-  )()"
->
+  )()">
   .not-used {
     -custom-noop: noop;
   }

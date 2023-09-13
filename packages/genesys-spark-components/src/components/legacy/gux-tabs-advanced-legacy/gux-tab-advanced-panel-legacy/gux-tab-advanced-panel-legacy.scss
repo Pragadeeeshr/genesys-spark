@@ -1,0 +1,13 @@
+@import '../../../../style/focus.scss';
+
+gux-tab-advanced-panel-legacy {
+  div[role='tabpanel'] {
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      @include gux-focus-ring;
+    }
+  }
+}

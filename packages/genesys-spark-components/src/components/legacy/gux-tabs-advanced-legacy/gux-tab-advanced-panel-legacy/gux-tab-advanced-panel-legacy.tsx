@@ -3,7 +3,6 @@ import {
   Event,
   EventEmitter,
   h,
-  Host,
   JSX,
   Method,
   Prop,
@@ -16,11 +15,11 @@ import {
  */
 
 @Component({
-  styleUrl: 'gux-tab-advanced-panel.less',
-  tag: 'gux-tab-advanced-panel',
-  shadow: true
+  styleUrl: 'gux-tab-advanced-panel-legacy.scss',
+  tag: 'gux-tab-advanced-panel-legacy',
+  shadow: false
 })
-export class GuxTabAdvancedPanel {
+export class GuxTabAdvancedPanelLegacy {
   @Prop()
   tabId: string;
 
@@ -45,7 +44,7 @@ export class GuxTabAdvancedPanel {
 
   render(): JSX.Element {
     return (
-      <Host
+      <div
         id={`gux-${this.tabId}-panel`}
         role="tabpanel"
         aria-labelledby={`gux-${this.tabId}-tab`}
@@ -54,7 +53,7 @@ export class GuxTabAdvancedPanel {
         aria-live="assertive"
       >
         <slot></slot>
-      </Host>
+      </div>
     ) as JSX.Element;
   }
 }

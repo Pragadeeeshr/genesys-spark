@@ -1,0 +1,89 @@
+@import '../../../style/mixins';
+
+.gux-tab-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
+  border-bottom: var(--gse-ui-tabs-set-divider-horizontal-height) solid var(--gse-ui-advancedTabs-divider-dividerColor);
+}
+
+.add-tab-button {
+  border: none;
+  height: var(--gse-ui-advancedTabs-button-add-height);
+  padding: var(--gse-ui-advancedTabs-item-gap);
+  color: var(--gse-ui-advancedTabs-item-icon-iconColor);
+  background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
+
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  gux-icon {
+    width: var(--gse-ui-advancedTabs-item-icon-size);
+    height: var(--gse-ui-advancedTabs-item-icon-size);
+  }
+}
+
+.tab-scroll-container {
+  display: flex;
+}
+
+.action-button-container {
+  display: flex;
+  border-radius: 4px;
+
+  .gux-scroll-button-container {
+    display: flex;
+    border-radius: 4px;
+
+    .gux-scroll-button {
+      display: flex;
+      justify-content: center;
+      width: var(--gse-ui-advancedTabs-item-menuButton-width);
+      height: var(--gse-ui-advancedTabs-button-arrow-height);
+      padding: 0;
+      color: var(--gse-ui-advancedTabs-item-menuButton-defaultColor);
+      border: none;
+
+
+
+      gux-icon {
+        margin: var(--gse-ui-advancedTabs-item-menuButton-gap)
+      }
+
+      // &:hover {
+      //   background-color: @gux-grey-50;
+      // }
+
+      &:active {
+        color: var(--gse-ui-advancedTabs-item-menuButton-activeColor);
+      }
+      &:disabled {
+        opacity: 0.5;
+      }
+      // &:focus-visible {
+      //   .gux-focus-ring();
+      // }
+    }
+  }
+}
+
+.gux-scrollable-section {
+  display: flex;
+  align-items: flex-end;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+.gux-sr-only {
+  @include gux-sr-only;
+}

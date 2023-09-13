@@ -1,13 +1,11 @@
 @import (reference) '../../../../style/focus.less';
 
-gux-tab-advanced-panel {
-  div[role='tabpanel'] {
-    &:focus {
-      outline: none;
-    }
+div[role='tabpanel'] {
+  &:focus {
+    outline: none;
+  }
 
-    &:focus-visible {
-      .gux-focus-ring();
-    }
+  &:focus-visible {
+    .gux-focus-ring();
   }
 }
