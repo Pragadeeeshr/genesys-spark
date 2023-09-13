@@ -104,7 +104,6 @@
 
 .content {
   display: flex;
-  color: var(--gse-ui-avatar-media-initialsForeground-inverse);
   font-family: var(--gse-ui-avatar-large-initials-fontFamily);
   font-size: var(--gse-ui-avatar-large-initials-fontSize);
   font-weight: var(--gse-ui-avatar-large-initials-fontWeight);
@@ -118,42 +117,65 @@
   box-sizing: border-box;
   &.gux-accent-default {
     background-color: var(--gse-ui-avatar-media-initialsBackground-default);
+    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+  }
+  &.gux-accent-add {
+    background-color: var(--gse-ui-avatar-media-initialsBackground-add);
+    color: var(--gse-ui-avatar-media-initialsForeground-add);
+  }
+  &.gux-accent-more {
+    background-color: var(
+      --gse-ui-avatar-media-initialsBackground-overflowCount
+    );
+    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
   }
   &.gux-accent-1 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent1);
+    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
   }
   &.gux-accent-2 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent2);
+    color: var(--gse-ui-avatar-media-initialsForeground-default);
   }
   &.gux-accent-3 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent3);
+    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
   }
   &.gux-accent-4 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent4);
+    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
   }
   &.gux-accent-5 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent5);
+    color: var(--gse-ui-avatar-media-initialsForeground-default);
   }
   &.gux-accent-6 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent6);
+    color: var(--gse-ui-avatar-media-initialsForeground-default);
   }
   &.gux-accent-7 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent7);
+    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
   }
   &.gux-accent-8 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent8);
+    color: var(--gse-ui-avatar-media-initialsForeground-default);
   }
   &.gux-accent-9 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent9);
+    color: var(--gse-ui-avatar-media-initialsForeground-default);
   }
   &.gux-accent-10 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent10);
+    color: var(--gse-ui-avatar-media-initialsForeground-default);
   }
   &.gux-accent-11 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent11);
+    color: var(--gse-ui-avatar-media-initialsForeground-default);
   }
   &.gux-accent-12 {
     background-color: var(--gse-ui-avatar-media-initialsBackground-accent12);
+    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
   }
 }
 
