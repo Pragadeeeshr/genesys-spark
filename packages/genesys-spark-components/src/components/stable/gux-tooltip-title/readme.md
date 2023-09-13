@@ -36,6 +36,7 @@ Type: `Promise<void>`
  - [gux-tab](../gux-tabs/gux-tab)
  - [gux-tab-advanced-legacy](../../legacy/gux-tabs-advanced-legacy/gux-tab-advanced-legacy)
  - [gux-tab-advanced-title](../gux-tabs-advanced/gux-tab-advanced-title)
+ - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-tag-beta](../../beta/gux-tag)
 
 ### Depends on
@@ -50,6 +51,7 @@ graph TD;
   gux-tab --> gux-tooltip-title
   gux-tab-advanced-legacy --> gux-tooltip-title
   gux-tab-advanced-title --> gux-tooltip-title
+  gux-table-toolbar-menu-button --> gux-tooltip-title
   gux-tag-beta --> gux-tooltip-title
   style gux-tooltip-title fill:#f9f,stroke:#333,stroke-width:4px
 ```

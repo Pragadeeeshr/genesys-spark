@@ -13,9 +13,9 @@ import {
   writeTask
 } from '@stencil/core';
 
-import { eventIsFrom } from '@utils/dom/event-is-from';
-import { randomHTMLId } from '@utils/dom/random-html-id';
-import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+// import { eventIsFrom } from '@utils/dom/event-is-from';
+// import { randomHTMLId } from '@utils/dom/random-html-id';
+// import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 /**
  * @slot default - gux-icon (optional) and text node (required)
@@ -29,7 +29,7 @@ import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 })
 export class GuxTabAdvancedTitle {
   private buttonElement: HTMLElement;
-  private tabOptionsButtonElement: HTMLButtonElement;
+  // private tabOptionsButtonElement: HTMLButtonElement;
   private tooltipTitleElement: HTMLGuxTooltipTitleElement;
   private tabTitle: string = '';
   private focusinFromClick: boolean = false;
@@ -68,44 +68,14 @@ export class GuxTabAdvancedTitle {
     }
   }
 
-  // @Listen('keydown')
-  // onKeydown(event: KeyboardEvent): void {
-  //   switch (event.key) {
-  //     case 'ArrowDown':
-  //     case 'Enter':
-  //       if (eventIsFrom('.gux-tab-options-button', event)) {
-  //         event.preventDefault();
-  //         this.popoverHidden = false;
-  //         this.focusFirstItemInPopupList();
-  //       }
-  //       break;
-  //     case 'Escape':
-  //       if (eventIsFrom('gux-list[slot="dropdown-options"]', event)) {
-  //         event.stopPropagation();
-  //         this.popoverHidden = true;
-  //         afterNextRenderTimeout(() => {
-  //           this.tabOptionsButtonElement?.focus();
-  //         });
-  //       }
-  //       break;
-  //   }
-  // }
-
-  // @Listen('keyup')
-  // onKeyup(event: KeyboardEvent): void {
-  //   switch (event.key) {
-  //     case ' ':
-  //       if (eventIsFrom('.gux-tab-options-button', event)) {
-  //         this.focusFirstItemInPopupList();
-  //       }
-  //   }
-  // }
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
+      case ' ':
+        event.preventDefault();
+        break;
       case 'Enter':
         if (!this.active && !this.guxDisabled) {
-          console.log('press', this.active)
           this.internalactivatetabpanel.emit(this.tabId);
         }
         break;
@@ -114,7 +84,6 @@ export class GuxTabAdvancedTitle {
   @Listen('click')
   onClick() {
     if (!this.active && !this.guxDisabled) {
-      console.log('click', this.active)
       this.internalactivatetabpanel.emit(this.tabId);
     }
   }
@@ -148,7 +117,7 @@ export class GuxTabAdvancedTitle {
   componentDidLoad(): void {
     const parentElement = this.root.parentElement as HTMLGuxTabAdvancedElement;
     this.tabId = parentElement.tabId;
-    console.log('tabid', parentElement.tabId)
+    console.log(this.tabTitle);
     this.tabTitle = this.root.shadowRoot
       .querySelector('gux-tooltip-title')
       .textContent.trim();

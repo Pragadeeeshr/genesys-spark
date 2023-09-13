@@ -112,7 +112,6 @@ export class GuxTabAdvancedContainer {
       );
       const active = tabTrigger.tabId === activeTab;
       void tabTrigger.guxSetActive(active);
-      console.log(tabTriggerTitle, 'tab trigger title');
       void tabTriggerTitle?.guxSetActive(active);
 
       if (active) {
@@ -162,8 +161,8 @@ export class GuxTabAdvancedContainer {
   }
 
   componentDidLoad() {
+    console.log(this.ariaLiveAlert);
     this.setTabTriggers();
-
     this.validateSortableInstance();
   }
 
@@ -193,24 +192,24 @@ export class GuxTabAdvancedContainer {
       void tabTrigger.guxGetActive().then(activeElement => {
         if (this.focused !== index && !activeElement) {
           tabTrigger.setAttribute('tabindex', '-1');
-          // if (tabTrigger.shadowRoot.querySelector('.gux-tab-options-button')) {
-          //   tabTrigger.shadowRoot
-          //     .querySelector('.gux-tab-options-button')
-          //     .setAttribute('tabindex', '-1');
-          // }
+          if (tabTrigger.shadowRoot.querySelector('.gux-tab-options-button')) {
+            tabTrigger.shadowRoot
+              .querySelector('.gux-tab-options-button')
+              .setAttribute('tabindex', '-1');
+          }
         }
       });
     });
     this.tabTriggers[this.focused].setAttribute('tabindex', '0');
-    // if (
-    //   this.tabTriggers[this.focused].shadowRoot.querySelector(
-    //     '.gux-tab-options-button'
-    //   )
-    // ) {
-    //   this.tabTriggers[this.focused].shadowRoot
-    //     .querySelector('.gux-tab-options-button')
-    //     .setAttribute('tabindex', '0');
-    // }
+    if (
+      this.tabTriggers[this.focused].shadowRoot.querySelector(
+        '.gux-tab-options-button'
+      )
+    ) {
+      this.tabTriggers[this.focused].shadowRoot
+        .querySelector('.gux-tab-options-button')
+        .setAttribute('tabindex', '0');
+    }
     void this.tabTriggers[this.focused].guxFocus();
   }
 
@@ -244,14 +243,8 @@ export class GuxTabAdvancedContainer {
       case 'ArrowRight':
       case 'ArrowDown':
         event.preventDefault();
-        if (
-          this.keyboardSort &&
-          !eventIsFrom('.gux-tab-options-button', event)
-        ) {
+        if (this.keyboardSort && eventIsFrom('gux-tab-advanced-title', event)) {
           this.ariaLiveAlert = '';
-          // const parentNode = this.root.querySelector(
-          //   'gux-tab-advanced-list'
-          // );
           const allNodes = this.root.querySelectorAll('gux-tab-advanced');
           const targetNodeIndex = Array.prototype.indexOf.call(
             allNodes,
@@ -278,24 +271,15 @@ export class GuxTabAdvancedContainer {
           });
 
           this.focusTab(this.focused);
-        } else if (
-          !eventIsFrom('.shadowRoot.gux-tab-options-button', event) &&
-          !eventIsFrom('.shadowRoot.gux-dropdown-option-container', event)
-        ) {
+        } else if (eventIsFrom('gux-tab-advanced-title', event)) {
           this.handleKeyboardScroll('forward');
         }
         break;
       case 'ArrowLeft':
       case 'ArrowUp':
         event.preventDefault();
-        if (
-          this.keyboardSort &&
-          !eventIsFrom('.gux-tab-options-button', event)
-        ) {
+        if (this.keyboardSort && eventIsFrom('gux-tab-advanced-title', event)) {
           this.ariaLiveAlert = '';
-          // const parentNode = this.root.querySelector(
-          //   'gux-tab-advanced-list-beta'
-          // );
           const allNodes = this.root.querySelectorAll('gux-tab-advanced');
           const targetNodeIndex = Array.prototype.indexOf.call(
             allNodes,
@@ -315,10 +299,7 @@ export class GuxTabAdvancedContainer {
             }
           });
           this.focusTab(this.focused);
-        } else if (
-          !eventIsFrom('.gux-tab-options-button', event) &&
-          !eventIsFrom('.gux-dropdown-option-container', event)
-        ) {
+        } else if (eventIsFrom('gux-tab-advanced-title', event)) {
           this.handleKeyboardScroll('backward');
         }
         break;

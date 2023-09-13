@@ -1,11 +1,8 @@
-@import (reference) '../../../../style/focus.less';
-@import (reference) '../../../../style/typography.less';
+@import '../../../../style/focus.scss';
+@import '../../../../style/typography.scss';
 
 // Variables part
-@gux-tabs-background: #e2e6ee;
-@gux-off-tab-fill: #c8cfda;
-
-gux-tab-advanced-list {
+gux-tab-advanced-list-legacy {
   .gux-tab-container {
     display: flex;
     align-items: flex-end;

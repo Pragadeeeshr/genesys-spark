@@ -31,11 +31,9 @@ import tabsResources from '../i18n/en.json';
   shadow: true
 })
 export class GuxTabAdvanced {
-  private buttonElement: HTMLButtonElement;
   private tabOptionsButtonElement: HTMLButtonElement;
   private dropdownOptionsButtonId: string = randomHTMLId();
   private tabTitle: string = '';
-  // private focusinFromClick: boolean = false;
 
   @Element()
   private root: HTMLElement;
@@ -66,7 +64,10 @@ export class GuxTabAdvanced {
     switch (event.key) {
       case 'ArrowDown':
       case 'Enter':
-        if (eventIsFrom('.gux-tab-options-button', event)) {
+        if (
+          !eventIsFrom('gux-tab-advanced', event) &&
+          !eventIsFrom('gux-list-item', event)
+        ) {
           event.preventDefault();
           this.popoverHidden = false;
           this.focusFirstItemInPopupList();
@@ -88,31 +89,11 @@ export class GuxTabAdvanced {
   onKeyup(event: KeyboardEvent): void {
     switch (event.key) {
       case ' ':
-        if (eventIsFrom('.gux-tab-options-button', event)) {
-          console.log('event is from...')
+        if (!eventIsFrom('gux-tab-advanced-title', event)) {
           this.focusFirstItemInPopupList();
         }
     }
   }
-
-  // @Listen('click')
-  // onClick(event: MouseEvent) {
-  //   if (eventIsFrom('.gux-tab-options-button', event)) {
-  //     return;
-  //   }
-  //   if (
-  //     eventIsFrom('gux-tab-advanced-title', event) &&
-  //     !this.active &&
-  //     !this.guxDisabled
-  //   ) {
-  //     this.internalactivatetabpanel.emit(this.tabId);
-  //   }
-  // }
-
-  // @Listen('mousedown')
-  // onMouseDown() {
-  //   this.focusinFromClick = true;
-  // }
 
   @Event()
   internalactivatetabpanel: EventEmitter<string>;
@@ -132,7 +113,6 @@ export class GuxTabAdvanced {
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxFocus(): Promise<void> {
-    console.log(this.root.querySelector('gux-tab-advanced-title'), 'tititlele')
     this.root.querySelector('gux-tab-advanced-title')?.focus();
   }
 
@@ -211,7 +191,7 @@ export class GuxTabAdvanced {
             })}
           ></gux-icon>
         </button>,
-        <gux-popover-list-beta
+        <gux-popover-list
           position="top-end"
           for={this.dropdownOptionsButtonId}
           displayDismissButton={false}
@@ -227,7 +207,7 @@ export class GuxTabAdvanced {
           >
             <slot name="dropdown-options" />
           </div>
-        </gux-popover-list-beta>
+        </gux-popover-list>
       ] as JSX.Element;
     }
 

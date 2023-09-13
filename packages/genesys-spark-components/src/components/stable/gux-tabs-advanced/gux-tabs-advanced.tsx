@@ -284,7 +284,6 @@ export class GuxTabsAdvanced {
     this.focused = tabIndex;
     this.tabTriggers.forEach((tabTrigger, index) => {
       void tabTrigger.guxGetActive().then(activeElement => {
-        console.log('active element', activeElement, this.focused)
         if (this.focused !== index && !activeElement) {
           tabTrigger.shadowRoot
             .querySelector('.gux-tab-button')
@@ -328,7 +327,6 @@ export class GuxTabsAdvanced {
       this.root.shadowRoot.querySelector('.gux-tab-container');
     const currentTab =
       this.root.querySelectorAll('gux-tab-advanced')[this.focused];
-    console.log(currentTab, 'currenttab');
     if (direction === 'forward') {
       if (this.focused < this.tabTriggers.length - 1) {
         writeTask(() => {
