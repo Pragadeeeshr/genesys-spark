@@ -1,5 +1,4 @@
-@import '../../../../style/color.scss';
-@import '../../../../style/spacing.scss';
+@gux-off-tab-fill: #c8cfda;
 
 // Style
 .gux-tab-sorting {
@@ -11,13 +10,13 @@
 gux-tab-advanced-legacy {
   &:not(:last-child) .gux-tab:not(.gux-dropdown-options) {
     .gux-tab-button {
-      border-right: 1px solid $gux-grey-50;
+      border-right: 1px solid #d7dce5;
     }
   }
 
   &:not(:last-child) .gux-dropdown-options {
     .gux-tab-options-button {
-      border-right: 1px solid $gux-grey-50;
+      border-right: 1px solid #d7dce5;
     }
   }
 
@@ -39,13 +38,13 @@ gux-tab-advanced-legacy {
       height: 50px;
       padding-right: 0;
       padding-left: 16px;
-      color: $gux-black-10;
-      background-color: $gux-grey-90;
+      color: #000;
+      background-color: #f6f7f9;
       border: none;
 
       &:focus-visible {
         height: 90%;
-        border: 3px solid $gux-blue-90;
+        border: 3px solid #aac9ff;
         border-radius: 5px;
         outline: none;
       }
@@ -56,11 +55,11 @@ gux-tab-advanced-legacy {
 
       &.gux-disabled {
         .gux-tab-button {
-          color: rgba($gux-black-10, 50%);
+          color: fade(#000, 50%);
         }
 
         .gux-tab-options-button {
-          color: rgba($gux-black-50, 50%);
+          color: fade(#2e394c, 50%);
           pointer-events: none;
           cursor: default;
         }
@@ -75,7 +74,7 @@ gux-tab-advanced-legacy {
       height: 30px;
       padding: 0;
       cursor: pointer;
-      background-color: $gux-grey-90;
+      background-color: #f6f7f9;
       border: none;
 
       &:focus-visible {
@@ -84,7 +83,7 @@ gux-tab-advanced-legacy {
         gux-icon {
           padding-right: 0;
           padding-left: 0;
-          border: 3px solid $gux-blue-90;
+          border: 3px solid #aac9ff;
           border-radius: 5px;
         }
       }
@@ -92,8 +91,8 @@ gux-tab-advanced-legacy {
       gux-icon {
         width: 16px;
         height: 16px;
-        padding-right: $gux-spacing-medium;
-        padding-left: $gux-spacing-xs;
+        padding-right: 16px;
+        padding-left: 8px;
         transition: color 0.25s;
       }
     }
@@ -106,7 +105,7 @@ gux-tab-advanced-legacy {
 
         &:focus-visible {
           height: 90%;
-          border: 3px solid $gux-blue-90;
+          border: 3px solid #aac9ff;
           border-radius: 5px;
           outline: none;
         }
@@ -128,21 +127,21 @@ gux-tab-advanced-legacy {
 
     &.gux-selected {
       padding-bottom: 0;
-      background-color: $gux-grey-100;
-      border-bottom: 2px solid $gux-blue-60;
+      background-color: #fdfdfd;
+      border-bottom: 2px solid #2a60c8;
 
       .gux-tab-button {
-        background-color: $gux-grey-100;
+        background-color: #fdfdfd;
       }
 
       .gux-tab-options-button {
-        background-color: $gux-grey-100;
+        background-color: #fdfdfd;
       }
     }
 
     &:hover:not(.gux-selected):not(.gux-disabled) {
       padding-bottom: 0;
-      border-bottom: 2px solid $gux-grey-10;
+      border-bottom: 2px solid #8a97ad;
     }
 
     gux-tooltip-title {
