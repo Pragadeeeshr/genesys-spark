@@ -42,6 +42,12 @@
       var(--gse-ui-formControl-input-default-border-color);
     border-radius: var(--gse-ui-formControl-input-borderRadius);
 
+    &:hover:not(:disabled) {
+      border: var(--gse-ui-formControl-input-hover-border-width)
+        var(--gse-ui-formControl-input-hover-border-style)
+        var(--gse-ui-formControl-input-hover-border-color);
+    }
+
     &:focus-within {
       @include gse-ui-focus;
     }
