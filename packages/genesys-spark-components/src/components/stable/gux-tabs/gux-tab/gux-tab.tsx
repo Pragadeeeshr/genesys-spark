@@ -1,8 +1,10 @@
 import {
   Component,
+  Element,
   Event,
   EventEmitter,
   h,
+  Host,
   JSX,
   Listen,
   Method,
@@ -17,11 +19,13 @@ import {
 @Component({
   styleUrl: 'gux-tab.scss',
   tag: 'gux-tab',
-  shadow: false
+  shadow: true
 })
 export class GuxTab {
-  private buttonElement: HTMLButtonElement;
   private tooltipTitleElement: HTMLGuxTooltipTitleElement;
+
+  @Element()
+  root: HTMLElement;
 
   /**
    * Tab id for the tab
@@ -69,7 +73,7 @@ export class GuxTab {
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxFocus(): Promise<void> {
-    this.buttonElement.focus();
+    this.root.focus();
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await
@@ -80,7 +84,7 @@ export class GuxTab {
 
   render(): JSX.Element {
     return (
-      <button
+      <Host
         class={{
           'gux-disabled': this.guxDisabled,
           'gux-tab': true,
@@ -93,14 +97,13 @@ export class GuxTab {
         aria-controls={`gux-${this.tabId}-panel`}
         aria-selected={this.active.toString()}
         tabIndex={this.active ? 0 : -1}
-        ref={el => (this.buttonElement = el)}
       >
         <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
           <span>
             <slot />
           </span>
         </gux-tooltip-title>
-      </button>
+      </Host>
     ) as JSX.Element;
   }
 }

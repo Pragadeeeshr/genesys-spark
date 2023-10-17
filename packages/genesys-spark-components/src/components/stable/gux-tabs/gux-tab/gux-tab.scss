@@ -1,85 +1,83 @@
-.gux-tab {
+// gux-tabs[alignment='center'] > gux-tab-list {
+//   .gux-scrollable-section {
+//     justify-content: center;
+//   }
+// }
+
+// gux-tabs[alignment='full-width'] > gux-tab-list {
+//   .gux-scrollable-section {
+//     flex-grow: 1;
+//   }
+
+//   gux-tab {
+//     width: 100%;
+//     max-width: 100%;
+
+//     .gux-tab {
+//       width: 100%;
+//       max-width: 100%;
+//     }
+//   }
+// }
+
+:host {
+  display: flex;
+  width: var(--gse-ui-tabs-item-fixedWidth);
+  max-width: 160px;
+  // .gux-tab {
   box-sizing: border-box;
   height: 40px; // TODO: COMUI-2327. Token needs to be updated to 40px.
   padding: var(--gse-ui-tabs-item-horizontal-padding);
 
-  &.gux-active {
-    border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
-      var(--gse-ui-tabs-item-indicator-activeColor); // TODO COMUI-2327 : Missing 2px height token for highlight.
-  }
-
-  &:hover:not(.gux-active):not(.gux-disabled) {
-    border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
-      var(--gse-ui-tabs-item-indicator-hoverColor);
-  }
-
   gux-tooltip-title {
     margin: auto;
   }
-}
-
-gux-tabs[alignment='center'] > gux-tab-list {
-  .gux-scrollable-section {
-    justify-content: center;
-  }
-}
-
-gux-tabs[alignment='full-width'] > gux-tab-list {
-  .gux-scrollable-section {
-    flex-grow: 1;
-  }
-
-  gux-tab {
-    width: 100%;
-    max-width: 100%;
-
-    .gux-tab {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-}
-
-gux-tab {
+  // }
+  // .gux-tab {
   display: flex;
+  align-items: center;
   width: var(--gse-ui-tabs-item-fixedWidth);
   max-width: 160px;
+  height: var(--gse-ui-tabs-item-height);
+  font-family: var(--gse-ui-tabs-item-itemText-fontFamily);
+  font-size: var(--gse-ui-tabs-item-itemText-fontSize);
+  font-weight: var(--gse-ui-tabs-item-itemText-fontWeight);
+  line-height: var(--gse-ui-tabs-item-itemText-lineHeight);
+  color: var(--gse-ui-tabs-item-itemTextColor);
+  cursor: pointer;
+  background-color: transparent; //TODO: COMUI-2327
+  border: none;
 
-  .gux-tab {
-    display: flex;
-    align-items: center;
-    width: var(--gse-ui-tabs-item-fixedWidth);
+  gux-tooltip-title {
     max-width: 160px;
-    height: var(--gse-ui-tabs-item-height);
-    font-family: var(--gse-ui-tabs-item-itemText-fontFamily);
-    font-size: var(--gse-ui-tabs-item-itemText-fontSize);
-    font-weight: var(--gse-ui-tabs-item-itemText-fontWeight);
-    line-height: var(--gse-ui-tabs-item-itemText-lineHeight);
-    color: var(--gse-ui-tabs-item-itemTextColor);
-    cursor: pointer;
-    background-color: transparent; //TODO: COMUI-2327
-    border: none;
+    white-space: nowrap;
+  }
+  // }
+}
 
-    &.gux-disabled {
-      cursor: default;
+:host(.gux-active) {
+  border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
+    var(--gse-ui-tabs-item-indicator-activeColor); // TODO COMUI-2327 : Missing 2px height token for highlight.
+}
 
-      gux-tooltip-title {
-        opacity: var(--gse-ui-tabs-item-disableOpacity);
-      }
-    }
+:host(:hover:not(.gux-active):not(.gux-disabled)) {
+  border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
+    var(--gse-ui-tabs-item-indicator-hoverColor);
+}
 
-    &:focus-visible {
-      border: var(--gse-semantic-focusRing-default-border-width)
-        var(--gse-semantic-focusRing-default-border-style)
-        var(--gse-semantic-focusRing-default-border-color); //TODO: COMUI-2327
+:host(:focus-visible) {
+  border: var(--gse-semantic-focusRing-default-border-width)
+    var(--gse-semantic-focusRing-default-border-style)
+    var(--gse-semantic-focusRing-default-border-color); //TODO: COMUI-2327
 
-      border-radius: 4px; // TODO:COMUI-2327
-      outline: none;
-    }
+  border-radius: 4px; // TODO:COMUI-2327
+  outline: none;
+}
 
-    gux-tooltip-title {
-      max-width: 160px;
-      white-space: nowrap;
-    }
+:host(.gux-disabled) {
+  cursor: default;
+
+  gux-tooltip-title {
+    opacity: var(--gse-ui-tabs-item-disableOpacity);
   }
 }

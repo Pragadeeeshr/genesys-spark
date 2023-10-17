@@ -56,7 +56,7 @@ export class GuxTabList {
           if (activeElement) {
             this.focused = index;
           } else {
-            tabTrigger.querySelector('button').setAttribute('tabindex', '-1');
+            tabTrigger.setAttribute('tabindex', '-1');
           }
         });
       });
@@ -128,14 +128,13 @@ export class GuxTabList {
     this.focused = tabIndex;
     this.tabTriggers.forEach((tabTrigger, index) => {
       void tabTrigger.guxGetActive().then(activeElement => {
+        console.log(tabTrigger);
         if (this.focused !== index && !activeElement) {
-          tabTrigger.querySelector('button').setAttribute('tabindex', '-1');
+          tabTrigger.setAttribute('tabindex', '-1');
         }
       });
     });
-    this.tabTriggers[this.focused]
-      .querySelector('button')
-      .setAttribute('tabindex', '0');
+    this.tabTriggers[this.focused].setAttribute('tabindex', '0');
     void this.tabTriggers[this.focused].guxFocus();
   }
 
