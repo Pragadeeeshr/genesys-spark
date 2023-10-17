@@ -13,4 +13,64 @@
     flex-direction: column;
     height: 100%;
   }
+
+  // scroll
+  .gux-tab-container {
+    box-sizing: content-box;
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: transparent; //TODO: COMUI-2327.
+  }
+
+  .gux-scroll-button-container {
+    display: flex;
+    border-radius: 4px; // TODO: COMUI-2341. Should we use button tokens here ?
+
+    .gux-scroll-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 40px;
+      color: #202937;
+      cursor: pointer;
+      background-color: #e2e6ee;
+      border: none;
+      border-radius: 4px;
+
+      gux-icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      &:hover:not(:disabled) {
+        background-color: #d7dce5;
+      }
+
+      &:active:not(:disabled) {
+        background-color: darken(#e2e6ee, 5%);
+      }
+
+      &:disabled {
+        cursor: default;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+::slotted([slot='gux-list']) {
+  overflow-x: auto;
+}
+::slotted([slot='gux-list']) {
+  display: flex;
+  flex: 1 1 auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
 }

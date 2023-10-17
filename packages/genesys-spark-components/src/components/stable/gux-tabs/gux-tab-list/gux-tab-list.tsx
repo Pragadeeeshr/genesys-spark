@@ -2,15 +2,13 @@ import {
   Component,
   Element,
   h,
+  Host,
   JSX,
   Listen,
   Method,
-  readTask,
   State,
   writeTask
 } from '@stencil/core';
-
-import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { OnMutation } from '@utils/decorator/on-mutation';
@@ -20,7 +18,7 @@ import tabsResources from '../i18n/en.json';
 @Component({
   styleUrl: 'gux-tab-list.scss',
   tag: 'gux-tab-list',
-  shadow: false
+  shadow: true
 })
 export class GuxTabList {
   private i18n: GetI18nValue;
@@ -37,10 +35,7 @@ export class GuxTabList {
   tabTriggers: NodeListOf<HTMLGuxTabElement>;
 
   @State()
-  private hasHorizontalScrollbar: boolean = false;
-
-  @State()
-  private hasVerticalScrollbar: boolean = false;
+  private hasScrollbar: boolean = false;
 
   @State()
   private isScrolledToBeginning: boolean = false;
@@ -63,15 +58,10 @@ export class GuxTabList {
     }
   }
 
-  @Listen('hasVerticalScrollbar')
-  onHasVerticalScrollBar(): void {
-    this.checkDisabledScrollButtons();
-  }
-
-  @Listen('scroll', { capture: true })
-  onScroll(): void {
-    this.checkDisabledScrollButtons();
-  }
+  // @Listen('scroll', { capture: true })
+  // onScroll(): void {
+  //   this.checkDisabledScrollButtons();
+  // }
 
   private resizeObserver?: ResizeObserver;
 
@@ -149,22 +139,17 @@ export class GuxTabList {
     }
   }
 
-  checkForScrollbarHideOrShow() {
-    readTask(() => {
-      const el = this.root.querySelector('.gux-scrollable-section');
-      const hasHorizontalScrollbar = el.clientWidth < el.scrollWidth;
-      const hasVerticalScrollbar = el.clientHeight < el.scrollHeight;
+  // checkForScrollbarHideOrShow() {
+  //   readTask(() => {
+  //     const el = this.root.querySelector('.gux-scrollable-section');
+  //     const hasScrollbar = el.clientWidth < el.scrollWidth;
 
-      if (hasHorizontalScrollbar !== this.hasHorizontalScrollbar) {
-        this.hasHorizontalScrollbar = hasHorizontalScrollbar;
-      }
-
-      if (hasVerticalScrollbar !== this.hasVerticalScrollbar) {
-        this.hasVerticalScrollbar = hasVerticalScrollbar;
-      }
-      this.checkDisabledScrollButtons();
-    });
-  }
+  //     if (hasScrollbar !== this.hasScrollbar) {
+  //       this.hasScrollbar = hasScrollbar;
+  //     }
+  //     this.checkDisabledScrollButtons();
+  //   });
+  // }
 
   handleKeyboardScroll(direction: 'forward' | 'backward'): void {
     const scrollableSection = this.root.querySelector(
@@ -174,28 +159,26 @@ export class GuxTabList {
     if (direction === 'forward') {
       if (this.focused < this.tabTriggers.length - 1) {
         writeTask(() => {
-          this.hasHorizontalScrollbar ? this.scrollRight() : this.scrollDown();
+          this.scrollRight();
         });
         this.focusTab(this.focused + 1);
       } else {
         writeTask(() => {
-          this.hasHorizontalScrollbar
-            ? scrollableSection.scrollBy(-scrollableSection.scrollWidth, 0)
-            : scrollableSection.scrollBy(0, -scrollableSection.scrollHeight);
+          this.hasScrollbar &&
+            scrollableSection.scrollBy(-scrollableSection.scrollWidth, 0);
         });
         this.focusTab(0);
       }
     } else if (direction === 'backward') {
       if (this.focused > 0) {
         writeTask(() => {
-          this.hasHorizontalScrollbar ? this.scrollLeft() : this.scrollUp();
+          this.scrollLeft();
         });
         this.focusTab(this.focused - 1);
       } else {
         writeTask(() => {
-          this.hasHorizontalScrollbar
-            ? scrollableSection.scrollBy(scrollableSection.scrollWidth, 0)
-            : scrollableSection.scrollBy(0, scrollableSection.scrollHeight);
+          this.hasScrollbar &&
+            scrollableSection.scrollBy(scrollableSection.scrollWidth, 0);
         });
         this.focusTab(this.tabTriggers.length - 1);
       }
@@ -224,11 +207,11 @@ export class GuxTabList {
   }
 
   componentDidLoad() {
-    if (!this.resizeObserver && window.ResizeObserver) {
-      this.resizeObserver = new ResizeObserver(() =>
-        this.checkForScrollbarHideOrShow()
-      );
-    }
+    // if (!this.resizeObserver && window.ResizeObserver) {
+    //   this.resizeObserver = new ResizeObserver(() =>
+    //     this.checkForScrollbarHideOrShow()
+    //   );
+    // }
 
     if (this.resizeObserver) {
       this.resizeObserver.observe(
@@ -236,11 +219,11 @@ export class GuxTabList {
       );
     }
 
-    if (!this.domObserver && window.MutationObserver) {
-      this.domObserver = new MutationObserver(() =>
-        this.checkForScrollbarHideOrShow()
-      );
-    }
+    // if (!this.domObserver && window.MutationObserver) {
+    //   this.domObserver = new MutationObserver(() =>
+    //     this.checkForScrollbarHideOrShow()
+    //   );
+    // }
 
     if (this.domObserver) {
       this.domObserver.observe(this.root, {
@@ -250,27 +233,27 @@ export class GuxTabList {
       });
     }
 
-    afterNextRenderTimeout(() => {
-      this.checkForScrollbarHideOrShow();
-    }, 500);
+    // afterNextRenderTimeout(() => {
+    //   this.checkForScrollbarHideOrShow();
+    // }, 500);
   }
 
-  checkDisabledScrollButtons() {
-    const scrollContainer = this.root.querySelector('.gux-scrollable-section');
-    if (this.hasHorizontalScrollbar) {
-      const scrollLeft = scrollContainer.scrollLeft;
-      const scrollLeftMax =
-        scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      this.isScrolledToBeginning = scrollLeft === 0;
-      this.isScrolledToEnd = scrollLeftMax - scrollLeft === 0;
-    } else {
-      const scrollTop = scrollContainer.scrollTop;
-      const scrollTopMax =
-        scrollContainer.scrollHeight - scrollContainer.clientHeight;
-      this.isScrolledToBeginning = scrollTop === 0;
-      this.isScrolledToEnd = scrollTopMax - scrollTop === 0;
-    }
-  }
+  // checkDisabledScrollButtons() {
+  //   const scrollContainer = this.root.querySelector('.gux-scrollable-section');
+  //   if (this.hasScrollbar) {
+  //     const scrollLeft = scrollContainer.scrollLeft;
+  //     const scrollLeftMax =
+  //       scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  //     this.isScrolledToBeginning = scrollLeft === 0;
+  //     this.isScrolledToEnd = scrollLeftMax - scrollLeft === 0;
+  //   } else {
+  //     const scrollTop = scrollContainer.scrollTop;
+  //     const scrollTopMax =
+  //       scrollContainer.scrollHeight - scrollContainer.clientHeight;
+  //     this.isScrolledToBeginning = scrollTop === 0;
+  //     this.isScrolledToEnd = scrollTopMax - scrollTop === 0;
+  //   }
+  // }
 
   getTabLength(): number {
     return this.tabTriggers[this.currentScrollIndex]?.scrollWidth;
@@ -301,47 +284,22 @@ export class GuxTabList {
     });
   }
 
-  scrollUp() {
-    writeTask(() => {
-      this.root
-        .querySelector('.gux-scrollable-section')
-        .scrollBy(0, -this.tabTriggers[this.focused].clientHeight);
-    });
-  }
-
-  scrollDown() {
-    writeTask(() => {
-      this.root
-        .querySelector('.gux-scrollable-section')
-        .scrollBy(0, this.tabTriggers[this.focused].clientHeight);
-    });
-  }
-
   render(): JSX.Element {
     return (
-      <div class="gux-tab-container">
-        {this.hasHorizontalScrollbar
-          ? this.renderScrollButton('scrollLeft')
-          : this.renderScrollButton('scrollUp')}
-
-        <div
-          role="tablist"
-          class="gux-scrollable-section"
-          aria-owns={this.triggerIds}
-        >
-          <slot></slot>
-        </div>
-        {this.hasHorizontalScrollbar
-          ? this.renderScrollButton('scrollRight')
-          : this.renderScrollButton('scrollDown')}
-      </div>
+      <Host
+        role="tablist"
+        class="gux-scrollable-section"
+        aria-owns={this.triggerIds}
+      >
+        <slot></slot>
+      </Host>
     ) as JSX.Element;
   }
 
   private renderScrollButton(direction: string): JSX.Element {
     return (
       <div class="gux-scroll-button-container">
-        {this.hasHorizontalScrollbar || this.hasVerticalScrollbar ? (
+        {this.hasScrollbar ? (
           <button
             disabled={this.getButtonDisabled(direction)}
             tabindex="-1"
@@ -363,11 +321,9 @@ export class GuxTabList {
   private getButtonDisabled(direction: string): boolean {
     switch (direction) {
       case 'scrollLeft':
-      case 'scrollUp':
         return this.isScrolledToBeginning;
 
       case 'scrollRight':
-      case 'scrollDown':
         return this.isScrolledToEnd;
     }
   }
@@ -380,11 +336,6 @@ export class GuxTabList {
       case 'scrollRight':
         this.scrollRight();
         break;
-      case 'scrollUp':
-        this.scrollUp();
-        break;
-      case 'scrollDown':
-        this.scrollDown();
     }
   }
 
@@ -394,10 +345,6 @@ export class GuxTabList {
         return 'chevron-small-left';
       case 'scrollRight':
         return 'chevron-small-right';
-      case 'scrollUp':
-        return 'chevron-small-up';
-      case 'scrollDown':
-        return 'chevron-small-down';
     }
   }
 }
