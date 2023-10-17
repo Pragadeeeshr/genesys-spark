@@ -469,6 +469,12 @@
     "sortComplete": "Sort complete",
     "sortCancelled": "Sort cancelled"
   },
+  "gux-tabs-vertical": {
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "scrollUp": "Scroll Up",
+    "scrollDown": "Scroll Down"
+  },
   "gux-tag": {
     "tag": "tag with label: {label}",
     "tag-disabled": "disabled tag with label: {label}",

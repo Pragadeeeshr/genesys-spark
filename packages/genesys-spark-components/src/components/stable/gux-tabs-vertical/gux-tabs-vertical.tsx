@@ -23,11 +23,11 @@ import { GuxTabsAlignment } from './gux-tabs-types';
  */
 
 @Component({
-  styleUrl: 'gux-tabs.scss',
-  tag: 'gux-tabs',
+  styleUrl: 'gux-tabs-vertical.scss',
+  tag: 'gux-tabs-vertical',
   shadow: true
 })
-export class GuxTabs {
+export class GuxTabsVertical {
   @Element()
   root: HTMLElement;
 
@@ -113,7 +113,7 @@ export class GuxTabs {
       <Host>
         <div class={`gux-tabs gux-${this.alignment}`}>
           <slot name="tab-list"></slot>
-          <div class={`gux-${this.alignment} gux-panel-container`}>
+          <div class={`gux-${this.alignment}} gux-panel-container`}>
             <slot onSlotchange={this.onSlotchange.bind(this)}></slot>
           </div>
         </div>

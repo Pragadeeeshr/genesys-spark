@@ -1,46 +1,4 @@
-.gux-tab {
-  box-sizing: border-box;
-  height: 40px; // TODO: COMUI-2327. Token needs to be updated to 40px.
-  padding: var(--gse-ui-tabs-item-horizontal-padding);
-
-  &.gux-active {
-    border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
-      var(--gse-ui-tabs-item-indicator-activeColor); // TODO COMUI-2327 : Missing 2px height token for highlight.
-  }
-
-  &:hover:not(.gux-active):not(.gux-disabled) {
-    border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
-      var(--gse-ui-tabs-item-indicator-hoverColor);
-  }
-
-  gux-tooltip-title {
-    margin: auto;
-  }
-}
-
-gux-tabs[alignment='center'] > gux-tab-list {
-  .gux-scrollable-section {
-    justify-content: center;
-  }
-}
-
-gux-tabs[alignment='full-width'] > gux-tab-list {
-  .gux-scrollable-section {
-    flex-grow: 1;
-  }
-
-  gux-tab {
-    width: 100%;
-    max-width: 100%;
-
-    .gux-tab {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-}
-
-gux-tab {
+gux-tab-vertical {
   display: flex;
   width: var(--gse-ui-tabs-item-fixedWidth);
   max-width: 160px;
@@ -80,6 +38,26 @@ gux-tab {
     gux-tooltip-title {
       max-width: 160px;
       white-space: nowrap;
+    }
+  }
+}
+gux-tabs-vertical > gux-tab-list-vertical {
+  .gux-tab {
+    display: flex;
+    justify-content: flex-end;
+    height: var(--gse-ui-tabs-item-vertical-fixedHeight);
+    padding: var(--gse-ui-tabs-item-vertical-padding);
+    border-right: var(--gse-ui-tabs-item-divider-vertical-width) solid
+      var(--gse-ui-tabs-item-divider-dividerColor); //TODO: COMUI-2327. -- replace vertical-width with vertical-height when token created.
+
+    &.gux-active {
+      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
+        var(--gse-ui-tabs-item-indicator-activeColor); // TODO COMUI-2327 : Missing 2px height token for highlight.
+    }
+
+    &:hover:not(.gux-active):not(.gux-disabled) {
+      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
+        var(--gse-ui-tabs-item-indicator-hoverColor);
     }
   }
 }

@@ -1,0 +1,44 @@
+<h1>gux-tabs</h1>
+
+<h2>Example 4 -- tabs vertical alignment in a resizable container</h2>
+
+<div
+  style="height: 300px; overflow: auto; resize: both; border: 1px dotted black"
+>
+  <gux-tabs-vertical class="example">
+    <gux-tab-list-vertical slot="tab-list">
+      <gux-tab-vertical tab-id="4-1">Tab Header 1</gux-tab-vertical>
+      <gux-tab-vertical tab-id="4-2">Tab Header 2</gux-tab-vertical>
+      <gux-tab-vertical gux-disabled tab-id="4-3">
+        Tab Header 3</gux-tab-vertical
+      >
+      <gux-tab-vertical tab-id="4-4"
+        >Tab Header long long long</gux-tab-vertical
+      >
+      <gux-tab-vertical tab-id="4-5">Tab Header 5</gux-tab-vertical>
+    </gux-tab-list-vertical>
+    <gux-tab-panel tab-id="4-1">Tab content 1</gux-tab-panel>
+    <gux-tab-panel tab-id="4-2">Tab content 2</gux-tab-panel>
+    <gux-tab-panel tab-id="4-3">Tab content 3</gux-tab-panel>
+    <gux-tab-panel tab-id="4-4">Tab content 4</gux-tab-panel>
+    <gux-tab-panel tab-id="4-5">Tab content 5</gux-tab-panel>
+  </gux-tabs-vertical>
+</div>
+
+<h2>Example 9 -- tabs within tabs</h2>
+
+<gux-tabs-vertical class="example">
+  <gux-tab-list-vertical slot="tab-list">
+    <gux-tab-vertical tab-id="9-1">Tab Header 1</gux-tab-vertical>
+  </gux-tab-list-vertical>
+  <gux-tab-panel tab-id="9-1">
+    <gux-tabs class="example">
+      <gux-tab-list slot="tab-list">
+        <gux-tab tab-id="9-2">Tab Header 2</gux-tab>
+        <gux-tab tab-id="9-3">Tab Header 3</gux-tab>
+      </gux-tab-list>
+      <gux-tab-panel tab-id="9-2">Tab content 2</gux-tab-panel>
+      <gux-tab-panel tab-id="9-3">Tab content 3</gux-tab-panel>
+    </gux-tabs>
+  </gux-tab-panel>
+</gux-tabs-vertical>
