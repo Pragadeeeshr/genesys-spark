@@ -2,7 +2,7 @@ import { Component, JSX, h, Element, State, forceUpdate } from '@stencil/core';
 import { Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import CodeBlock from '@tiptap/extension-code-block';
-// import { Level as HeadingLevel } from '@tiptap/extension-heading';
+import { Level as HeadingLevel } from '@tiptap/extension-heading';
 
 @Component({
   styleUrl: 'gux-rich-text-editor.scss',
@@ -25,7 +25,7 @@ export class GuxScreenReader {
       <div class="menu">
         <gux-button
           accent={this.editor?.isActive('bold') ? 'primary' : 'tertiary'}
-          onClick={() => this.editor?.chain().focus().toggleBold().run()}
+          onClick={() => this.editor.chain().focus().toggleBold().run()}
           class={{ 'has-active': this.editor?.isActive('bold') }}
         >
           <gux-icon icon-name="fa/bold-regular" decorative={true}></gux-icon>
@@ -33,7 +33,7 @@ export class GuxScreenReader {
 
         <gux-button
           accent={this.editor?.isActive('strike') ? 'primary' : 'tertiary'}
-          onClick={() => this.editor?.chain().focus().toggleStrike().run()}
+          onClick={() => this.editor.chain().focus().toggleStrike().run()}
         >
           <gux-icon
             icon-name="fa/strikethrough-regular"
@@ -42,27 +42,27 @@ export class GuxScreenReader {
         </gux-button>
         <gux-button
           accent={this.editor?.isActive('bulletList') ? 'primary' : 'tertiary'}
-          onClick={() => this.editor?.chain().focus().toggleBulletList().run()}
+          onClick={() => this.editor.chain().focus().toggleBulletList().run()}
         >
           <gux-icon icon-name="fa/list-ul-regular" decorative={true}></gux-icon>
         </gux-button>
         <gux-button
           accent={this.editor?.isActive('orderedList') ? 'primary' : 'tertiary'}
-          onClick={() => this.editor?.chain().focus().toggleOrderedList().run()}
+          onClick={() => this.editor.chain().focus().toggleOrderedList().run()}
         >
           <gux-icon icon-name="fa/list-ol-regular" decorative={true}></gux-icon>
         </gux-button>
 
         <gux-button
           accent={this.editor?.isActive('code') ? 'primary' : 'tertiary'}
-          onClick={() => this.editor?.chain().focus().toggleCode().run()}
+          onClick={() => this.editor.chain().focus().toggleCode().run()}
         >
           <gux-icon icon-name="fa/code-regular" decorative={true}></gux-icon>
         </gux-button>
 
         <gux-button
           accent={this.editor?.isActive('codeBlock') ? 'primary' : 'tertiary'}
-          onClick={() => this.editor?.chain().focus().toggleCodeBlock().run()}
+          onClick={() => this.editor.chain().focus().toggleCodeBlock().run()}
         >
           <gux-icon icon-name="fa/code-regular" decorative={true}></gux-icon>
         </gux-button>
@@ -71,10 +71,23 @@ export class GuxScreenReader {
           <gux-listbox>
             <gux-option
               value="normal"
-              onClick={() => this.editor?.chain().focus().setParagraph().run()}
+              onClick={() => this.editor.chain().focus().setParagraph().run()}
             >
               Normal text
             </gux-option>
+            {[1, 2, 3, 4, 5, 6].map(
+              (level: HeadingLevel) =>
+                (
+                  <gux-option
+                    value="value"
+                    onClick={() =>
+                      this.editor.chain().focus().setHeading({ level }).run()
+                    }
+                  >
+                    H{level}
+                  </gux-option>
+                ) as JSX.Element
+            )}
           </gux-listbox>
         </gux-dropdown>
       </div>
