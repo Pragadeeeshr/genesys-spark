@@ -54,6 +54,14 @@
     "./shared-configs/*",
     "./web-apps/*"
   ],
+  "dependencies": {
+    "@tiptap/core": "^2.3.0",
+    "@tiptap/extension-code-block": "^2.3.0",
+    "@tiptap/extension-code-block-lowlight": "^2.3.0",
+    "@tiptap/pm": "^2.3.0",
+    "@tiptap/starter-kit": "^2.3.0",
+    "lowlight": "^3.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.1.0",
     "@commitlint/config-conventional": "^19.1.0",

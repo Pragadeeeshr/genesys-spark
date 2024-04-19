@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  padding: 16px;
+}
+
+.tiptap {
+  height: 300px;
+  overflow-y: auto;
+}
+
+.tiptap {
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid rgb(0 0 0 / 50%);
+}
+
+p {
+  margin: 0 0 8px;
+}
+
+.menu {
+  display: flex;
+  gap: 8px;
+}
+
+.bullet-list {
+  & li {
+    margin: 4px 0;
+  }
+}
+
+code {
+  display: block;
+  padding: 4px 8px;
+  background-color: rgb(0 0 0 / 10%);
+  border-radius: 4px;
+}
