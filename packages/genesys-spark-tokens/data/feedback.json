@@ -652,6 +652,20 @@
         "value": "{spacing.md}",
         "type": "spacing"
       }
+    },
+    "width_size": {
+      "sm": {
+        "value": "400px",
+        "type": "spacing"
+      },
+      "md": {
+        "value": "560px",
+        "type": "spacing"
+      },
+      "lg": {
+        "value": "960px",
+        "type": "spacing"
+      }
     }
   },
   "dynamic_side_sheet": {
@@ -726,6 +740,16 @@
     "footer": {
       "padding": {
         "value": "{spacing.md}",
+        "type": "spacing"
+      }
+    },
+    "width_size": {
+      "sm": {
+        "value": "400px",
+        "type": "spacing"
+      },
+      "md": {
+        "value": "560px",
         "type": "spacing"
       }
     }
