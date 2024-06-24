@@ -270,6 +270,18 @@
         "value": "{spacing.2xs} {spacing.3xs}",
         "type": "spacing"
       }
+    },
+    "quote_block": {
+      "padding": {
+        "value": "0 {spacing.md}",
+        "type": "spacing"
+      },
+      "container": {
+        "gap": {
+          "value": "{spacing.3xs}",
+          "type": "spacing"
+        }
+      }
     }
   }
 }
