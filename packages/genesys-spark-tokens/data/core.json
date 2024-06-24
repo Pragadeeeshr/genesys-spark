@@ -812,6 +812,10 @@
     "noto_sans": {
       "value": "Noto Sans",
       "type": "fontFamilies"
+    },
+    "noto_sans_mono": {
+      "value": "Noto Sans Mono",
+      "type": "fontFamilies"
     }
   },
   "font_size": {
