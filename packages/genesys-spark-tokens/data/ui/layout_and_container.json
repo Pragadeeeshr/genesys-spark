@@ -320,6 +320,22 @@
         "value": "{divider.small.size}",
         "type": "sizing"
       }
+    },
+    "inner_container": {
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing"
+      }
+    },
+    "content_container": {
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing"
+      }
+    },
+    "padding": {
+      "value": "{spacing.3xs} {spacing.xs} {spacing.xs}",
+      "type": "spacing"
     }
   }
 }
