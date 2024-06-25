@@ -443,6 +443,25 @@
         "value": "{color.plum.700}",
         "type": "color"
       }
+    },
+    "divider": {
+      "10": {
+        "value": "{color.white}",
+        "type": "color"
+      },
+      "20": {
+        "value": "{color.cornflower.300}",
+        "type": "color"
+      },
+      "30": {
+        "value": "{color.blueberry.600}",
+        "type": "color"
+      },
+      "40": {
+        "value": "{color.lavenderhaze.500}",
+        "type": "color",
+        "description": "Color to be used for toolbar dividers."
+      }
     }
   },
   "border": {

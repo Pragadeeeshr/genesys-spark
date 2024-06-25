@@ -440,6 +440,24 @@
         "value": "{color_legacy.secondary.electric_purple}",
         "type": "color"
       }
+    },
+    "divider": {
+      "10": {
+        "value": "{color.white}",
+        "type": "color"
+      },
+      "20": {
+        "value": "{color_legacy.grey.30}",
+        "type": "color"
+      },
+      "30": {
+        "value": "{color_legacy.blue.60}",
+        "type": "color"
+      },
+      "40": {
+        "value": "{color_legacy.grey.10}",
+        "type": "color"
+      }
     }
   },
   "border": {

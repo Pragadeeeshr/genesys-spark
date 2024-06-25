@@ -573,5 +573,20 @@
         "description": "The shadow we used for small-sized components like tooltips."
       }
     }
+  },
+  "divider": {
+    "medium": {
+      "padding": {
+        "value": "0 {spacing.4xs}",
+        "type": "spacing"
+      }
+    },
+    "small": {
+      "size": {
+        "value": "{size.5xs}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
+      }
+    }
   }
 }

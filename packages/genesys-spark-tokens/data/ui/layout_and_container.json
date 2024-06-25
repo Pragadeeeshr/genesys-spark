@@ -314,6 +314,12 @@
         "value": "{foreground.surface.mid_emphasis}",
         "type": "color"
       }
+    },
+    "divider": {
+      "width": {
+        "value": "{divider.small.size}",
+        "type": "sizing"
+      }
     }
   }
 }

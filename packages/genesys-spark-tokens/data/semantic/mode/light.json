@@ -657,6 +657,13 @@
           "description": "The color we used for the optional indicator."
         }
       }
+    },
+    "divider": {
+      "default": {
+        "value": "{foreground.divider.40}",
+        "type": "color",
+        "description": "This color is for toolbar dividers, for example rich text editor and data table toolbars."
+      }
     }
   },
   "border": {
