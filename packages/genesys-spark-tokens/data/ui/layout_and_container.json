@@ -269,6 +269,10 @@
       "padding": {
         "value": "{spacing.2xs} {spacing.3xs}",
         "type": "spacing"
+      },
+      "foreground_color": {
+        "value": "{foreground.surface.mid_emphasis}",
+        "type": "color"
       }
     },
     "quote_block": {
@@ -281,6 +285,34 @@
           "value": "{spacing.3xs}",
           "type": "spacing"
         }
+      },
+      "foreground_color": {
+        "value": "{foreground.surface.mid_emphasis}",
+        "type": "color"
+      }
+    },
+    "heading_1": {
+      "foreground_color": {
+        "value": "{foreground.surface.mid_emphasis}",
+        "type": "color"
+      }
+    },
+    "heading_2": {
+      "foreground_color": {
+        "value": "{foreground.surface.mid_emphasis}",
+        "type": "color"
+      }
+    },
+    "heading_3": {
+      "foreground_color": {
+        "value": "{foreground.surface.mid_emphasis}",
+        "type": "color"
+      }
+    },
+    "paragraph": {
+      "foreground_color": {
+        "value": "{foreground.surface.mid_emphasis}",
+        "type": "color"
       }
     }
   }
