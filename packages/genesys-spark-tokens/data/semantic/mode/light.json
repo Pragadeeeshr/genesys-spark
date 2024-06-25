@@ -471,7 +471,7 @@
         "description": "The default color for high emphasis content on surfaces, like headings, subheadings, quotes or bold text."
       },
       "mid_emphasis": {
-        "value": "{foreground.primary.10}",
+        "value": "{foreground.primary.20}",
         "type": "color",
         "description": "The default color for medium emphasis content on surfaces, like normal paragraphs."
       },
