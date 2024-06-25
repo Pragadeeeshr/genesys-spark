@@ -255,7 +255,7 @@
   "rte": {
     "code_block": {
       "background_color": {
-        "value": "{color.lavenderhaze.200}",
+        "value": "{background.surface.page.tonal_medium}",
         "type": "color"
       },
       "border": {
@@ -276,13 +276,13 @@
       }
     },
     "quote_block": {
-      "padding": {
+      "margin": {
         "value": "0 {spacing.md}",
         "type": "spacing"
       },
       "container": {
-        "gap": {
-          "value": "{spacing.3xs}",
+        "padding": {
+          "value": "0 0 0 {spacing.3xs}",
           "type": "spacing"
         }
       },
@@ -336,6 +336,13 @@
     "padding": {
       "value": "{spacing.3xs} {spacing.xs} {spacing.xs}",
       "type": "spacing"
+    },
+    "menu_button": {
+      "height": {
+        "value": "{interactive.small.height}",
+        "type": "sizing",
+        "description": "This height token is specific to the buttons that can be used within the Rich Text Editor menu."
+      }
     }
   }
 }
