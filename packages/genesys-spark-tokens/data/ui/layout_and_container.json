@@ -392,6 +392,14 @@
           "value": "{background.interactive.custom.islandaqua}",
           "type": "color"
         }
+      },
+      "width": {
+        "value": "{interactive.x_small.width}",
+        "type": "sizing"
+      },
+      "height": {
+        "value": "{interactive.x_small.height}",
+        "type": "sizing"
       }
     }
   }
