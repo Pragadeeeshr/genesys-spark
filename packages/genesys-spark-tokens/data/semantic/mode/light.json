@@ -104,31 +104,6 @@
         }
       },
       "custom": {
-        "40": {
-          "value": "{color.mango.500}",
-          "type": "color",
-          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
-        },
-        "50": {
-          "value": "{color.raspberry.300}",
-          "type": "color",
-          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
-        },
-        "60": {
-          "value": "{color.blueberry.200}",
-          "type": "color",
-          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
-        },
-        "70": {
-          "value": "{color.mineral.300}",
-          "type": "color",
-          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
-        },
-        "80": {
-          "value": "{color.islandaqua.300}",
-          "type": "color",
-          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
-        },
         "tomato": {
           "value": "{background.custom_accents.color_swatch.10}",
           "type": "color",
@@ -141,6 +116,31 @@
         },
         "pear": {
           "value": "{background.custom_accents.color_swatch.30}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "mango": {
+          "value": "{background.custom_accents.color_swatch.40}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "raspberry": {
+          "value": "{background.custom_accents.color_swatch.50}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "blueberry": {
+          "value": "{background.custom_accents.color_swatch.60}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "mineral": {
+          "value": "{background.custom_accents.color_swatch.70}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "islandaqua": {
+          "value": "{background.custom_accents.color_swatch.80}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         }
