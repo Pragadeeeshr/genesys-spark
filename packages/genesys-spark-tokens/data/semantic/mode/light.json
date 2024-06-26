@@ -102,6 +102,48 @@
           "type": "color",
           "description": "The background color of danger actions in the active state."
         }
+      },
+      "custom": {
+        "40": {
+          "value": "{color.mango.500}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "50": {
+          "value": "{color.raspberry.300}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "60": {
+          "value": "{color.blueberry.200}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "70": {
+          "value": "{color.mineral.300}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "80": {
+          "value": "{color.islandaqua.300}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "tomato": {
+          "value": "{background.custom_accents.color_swatch.10}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "coral": {
+          "value": "{background.custom_accents.color_swatch.20}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "pear": {
+          "value": "{background.custom_accents.color_swatch.30}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        }
       }
     },
     "overlay": {
