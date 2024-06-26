@@ -343,6 +343,56 @@
         "type": "sizing",
         "description": "This height token is specific to the buttons that can be used within the Rich Text Editor menu."
       }
+    },
+    "color_swatch": {
+      "tomato": {
+        "default": {
+          "value": "{background.interactive.custom.tomato}",
+          "type": "color"
+        }
+      },
+      "coral": {
+        "default": {
+          "value": "{background.interactive.custom.coral}",
+          "type": "color"
+        }
+      },
+      "pear": {
+        "default": {
+          "value": "{background.interactive.custom.pear}",
+          "type": "color"
+        }
+      },
+      "mango": {
+        "default": {
+          "value": "{background.interactive.custom.mango}",
+          "type": "color"
+        }
+      },
+      "raspberry": {
+        "default": {
+          "value": "{background.interactive.custom.raspberry}",
+          "type": "color"
+        }
+      },
+      "blueberry": {
+        "default": {
+          "value": "{background.interactive.custom.blueberry}",
+          "type": "color"
+        }
+      },
+      "mineral": {
+        "default": {
+          "value": "{background.interactive.custom.mineral}",
+          "type": "color"
+        }
+      },
+      "islandaqua": {
+        "default": {
+          "value": "{background.interactive.custom.islandaqua}",
+          "type": "color"
+        }
+      }
     }
   }
 }
