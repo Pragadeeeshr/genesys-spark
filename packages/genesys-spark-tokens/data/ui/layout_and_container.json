@@ -401,6 +401,12 @@
         "value": "{interactive.x_small.height}",
         "type": "sizing"
       }
+    },
+    "color_palette": {
+      "gap": {
+        "value": "{interactive.medium.gap}",
+        "type": "spacing"
+      }
     }
   }
 }
