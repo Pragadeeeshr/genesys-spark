@@ -273,6 +273,18 @@
       "foreground_color": {
         "value": "{foreground.surface.mid_emphasis}",
         "type": "color"
+      },
+      "sm": {
+        "regular": {
+          "value": {
+            "fontFamily": "{font_family.monospace.body}",
+            "fontWeight": "{font_weight.regular}",
+            "fontSize": "{font_size.xs}",
+            "lineHeight": "{line_height.2xs}"
+          },
+          "type": "typography",
+          "description": "This typography token is recommended to be used only for code blocks."
+        }
       }
     },
     "quote_block": {
@@ -289,30 +301,89 @@
       "foreground_color": {
         "value": "{foreground.surface.mid_emphasis}",
         "type": "color"
+      },
+      "md": {
+        "regular": {
+          "value": {
+            "fontFamily": "{font_family.body}",
+            "fontWeight": "{font_weight.regular}",
+            "fontSize": "{font_size.sm}",
+            "lineHeight": "{line_height.sm}"
+          },
+          "type": "typography",
+          "description": "This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors."
+        }
+      },
+      "border_left": {
+        "value": {
+          "color": "{border.surface.emphasis.default}",
+          "width": "{container.emphasis.border_width}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "heading_1": {
       "foreground_color": {
         "value": "{foreground.surface.mid_emphasis}",
         "type": "color"
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.xl}",
+          "lineHeight": "{line_height.xl}"
+        },
+        "type": "typography"
       }
     },
     "heading_2": {
       "foreground_color": {
         "value": "{foreground.surface.mid_emphasis}",
         "type": "color"
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.lg}",
+          "lineHeight": "{line_height.lg}"
+        },
+        "type": "typography"
       }
     },
     "heading_3": {
       "foreground_color": {
         "value": "{foreground.surface.mid_emphasis}",
         "type": "color"
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.md}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography"
       }
     },
     "paragraph": {
       "foreground_color": {
         "value": "{foreground.surface.mid_emphasis}",
         "type": "color"
+      },
+      "md": {
+        "regular": {
+          "value": {
+            "fontFamily": "{font_family.body}",
+            "fontWeight": "{font_weight.regular}",
+            "fontSize": "{font_size.sm}",
+            "lineHeight": "{line_height.sm}"
+          },
+          "type": "typography",
+          "description": "This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors."
+        }
       }
     },
     "divider": {
