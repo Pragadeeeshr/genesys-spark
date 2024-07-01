@@ -933,6 +933,10 @@
       "value": "1px",
       "type": "sizing"
     },
+    "4xs": {
+      "value": "2px",
+      "type": "sizing"
+    },
     "xs": {
       "value": "16px",
       "type": "sizing"

@@ -533,9 +533,9 @@
       }
     },
     "emphasis": {
-      "border_width": {
-        "value": "{border_width.2}",
-        "type": "borderWidth"
+      "width": {
+        "value": "{size.4xs}",
+        "type": "sizing"
       }
     }
   },
