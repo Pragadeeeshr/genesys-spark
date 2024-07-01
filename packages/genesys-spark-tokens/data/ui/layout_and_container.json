@@ -473,6 +473,14 @@
       "height": {
         "value": "{interactive.x_small.height}",
         "type": "sizing"
+      },
+      "focus_border": {
+        "value": {
+          "color": "{border.focus}",
+          "width": "{border_width.2}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "color_palette": {
