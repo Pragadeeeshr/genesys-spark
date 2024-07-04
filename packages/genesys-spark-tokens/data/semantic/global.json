@@ -254,32 +254,6 @@
       "description": "We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.\n\nWe usually pair it with low emphasis colors."
     }
   },
-  "rte": {
-    "heading_3": {
-      "semi_bold": {
-        "value": {
-          "fontFamily": "{font_family.headings}",
-          "fontWeight": "{font_weight.semi_bold}",
-          "fontSize": "{font_size.md}",
-          "lineHeight": "{line_height.md}"
-        },
-        "type": "typography"
-      }
-    },
-    "heading_2": {
-      "md": {
-        "semi_bold": {
-          "value": {
-            "fontFamily": "{font_family.headings}",
-            "fontWeight": "{font_weight.semi_bold}",
-            "fontSize": "{font_size.lg}",
-            "lineHeight": "{line_height.lg}"
-          },
-          "type": "typography"
-        }
-      }
-    }
-  },
   "subheading": {
     "bold": {
       "value": {

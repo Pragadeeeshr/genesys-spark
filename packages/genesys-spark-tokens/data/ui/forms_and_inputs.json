@@ -1634,7 +1634,7 @@
       },
       "text": {
         "gap": {
-          "value": "{spacing.xs}",
+          "value": "{spacing.4xs}",
           "type": "spacing"
         }
       },
