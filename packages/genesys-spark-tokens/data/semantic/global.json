@@ -6,7 +6,7 @@
           "fontFamily": "{font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "fontSize": "{font_size.xs}",
-          "lineHeight": "{line_height.2xs}"
+          "lineHeight": "{line_height.xs}"
         },
         "type": "typography",
         "description": "This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors."
@@ -598,6 +598,11 @@
     "form_field": {
       "gap": {
         "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The default gap for between elements inside a form field, like textfields, text areas."
+      },
+      "padding": {
+        "value": "{spacing.3xs}",
         "type": "spacing",
         "description": "The default gap for between elements inside a form field, like textfields, text areas."
       }

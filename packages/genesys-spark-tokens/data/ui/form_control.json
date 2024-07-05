@@ -192,11 +192,11 @@
     },
     "label": {
       "padding": {
-        "value": "0 0 {spacing.3xs} 0",
+        "value": "0 0 {form_control.form_field.padding} 0",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{form_control.form_field.gap}",
         "type": "spacing"
       },
       "text": {
@@ -248,20 +248,15 @@
     },
     "helper": {
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{form_control.form_field.gap}",
         "type": "spacing"
       },
       "helper_text": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.regular}"
-        },
+        "value": "{body.sm.regular}",
         "type": "typography"
       },
       "padding": {
-        "value": "{spacing.3xs} 0 0 0",
+        "value": "{form_control.form_field.padding} 0 0 0",
         "type": "spacing"
       },
       "icon": {
@@ -271,7 +266,7 @@
         }
       },
       "padding_small": {
-        "value": "{spacing.4xs} 0 0 0",
+        "value": "{form_control.form_field.gap} 0 0 0",
         "type": "spacing"
       },
       "error_padding": {
@@ -279,11 +274,11 @@
         "type": "spacing"
       },
       "default_color": {
-        "value": "{color.cornflower.600}",
+        "value": "{foreground.form_control.help_text.default}",
         "type": "color"
       },
       "error_color": {
-        "value": "{color.error.main}",
+        "value": "{foreground.form_control.help_text.error}",
         "type": "color"
       },
       "icon_size": {
