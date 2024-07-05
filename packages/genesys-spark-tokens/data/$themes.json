@@ -1594,7 +1594,6 @@
       "form_control.label.indicator.required_color": "c654752381145e516d25dd2981ea954d3b9fe9c5",
       "form_control.label.indicator.optional_color": "b3a4ef01fc2ddd171e95d82aadfe77e558a5b3f4",
       "form_control.label.icon_size": "69dfa1a47154cfbc4f9a596f1602d0cd96d7ed27",
-      "form_control.label.tooltip_trigger.optional_color": "a51fa73548d3d486cd6a0079bcf13830d7e14823",
       "form_control.label.tooltip_trigger.border_radius": "745899192109572fd30ad59c70b78e660dcd7c15",
       "form_control.group.gap_items": "e0836e29b0ba2c5561a5b6ff57b5a2e125705a2e",
       "form_control.helper.gap": "aa3ea794acd979a5add34d1430993049a1c30829",
@@ -1784,7 +1783,8 @@
       "form_footer.modal.desktop.top_padding": "b14d3a9ad6947a042fdc3ddd106217b6345bea7f",
       "form_footer.modal.desktop.horizontal_padding": "2dafc1786b3dbe723af13d827a6360ecdc41d1c1",
       "form_footer.modal.desktop.gap": "4a66b95f5b7f40506f5610ad53edc1f48e1df87e",
-      "form_footer.background_color": "175ccc38d28e5344f21ced588c099d07abda0aa4"
+      "form_footer.background_color": "175ccc38d28e5344f21ced588c099d07abda0aa4",
+      "form_control.label.tooltip_trigger.color": "a51fa73548d3d486cd6a0079bcf13830d7e14823"
     },
     "group": ".ui"
   }

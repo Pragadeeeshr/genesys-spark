@@ -200,52 +200,42 @@
         "type": "spacing"
       },
       "text": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.regular}"
-        },
+        "value": "{body.sm.regular}",
         "type": "typography"
       },
       "text_bold": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.semi_bold}"
-        },
+        "value": "{body.sm.semi_bold}",
         "type": "typography"
       },
       "label_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.form_control.label.default}",
         "type": "color"
       },
       "indicator": {
         "text": {
-          "value": "{typography.body.sm}",
+          "value": "{body.sm.regular}",
           "type": "typography"
         },
         "required_color": {
-          "value": "{color.error.main}",
+          "value": "{foreground.form_control.label.required_accent}",
           "type": "color"
         },
         "optional_color": {
-          "value": "{color.cornflower.700}",
+          "value": "{foreground.form_control.label.optional_accent}",
           "type": "color"
         }
       },
       "icon_size": {
-        "value": "{icon.small.size}",
+        "value": "{assets.small.size}",
         "type": "sizing"
       },
       "tooltip_trigger": {
-        "optional_color": {
-          "value": "{color.cornflower.700}",
+        "color": {
+          "value": "{foreground.form_control.label.tooltip}",
           "type": "color"
         },
         "border_radius": {
-          "value": "2px",
+          "value": "{border_radius.focus.xsmall}",
           "type": "borderRadius"
         }
       }
@@ -297,7 +287,7 @@
         "type": "color"
       },
       "icon_size": {
-        "value": "{icon.small.size}",
+        "value": "{assets.small.size}",
         "type": "sizing"
       }
     },
@@ -325,7 +315,7 @@
     },
     "focus_ring": {
       "border_radius": {
-        "value": "{border_radius.sm}",
+        "value": "{border_radius.focus.small}",
         "type": "borderRadius"
       }
     }
