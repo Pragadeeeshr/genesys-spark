@@ -421,6 +421,11 @@
         "value": "{border_radius.focus.medium}",
         "type": "borderRadius",
         "description": "The recommended medium border-radius for focus. Eg check box"
+      },
+      "border_width": {
+        "value": "{border_width.2}",
+        "type": "borderWidth",
+        "description": "The recommended width of the focus outline fo medium-sized components, like the stars on a checkbox"
       }
     },
     "small": {
@@ -605,6 +610,18 @@
         "value": "{spacing.3xs}",
         "type": "spacing",
         "description": "The default gap for between elements inside a form field, like textfields, text areas."
+      }
+    },
+    "click_input": {
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The default gap for between elements inside a form group, like checkboxes, radio buttons."
+      },
+      "padding": {
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The default padding for between elements inside a form group, like checkboxes, radio buttons."
       }
     }
   },
