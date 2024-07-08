@@ -66,5 +66,13 @@
       "value": "{color.cornflower.600}",
       "type": "color"
     }
+  },
+  "dummy_button": {
+    "default": {
+      "background_color": {
+        "value": "{background.interactive.dummy.default}",
+        "type": "color"
+      }
+    }
   }
 }

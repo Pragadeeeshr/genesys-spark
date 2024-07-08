@@ -798,6 +798,12 @@
         "value": "#191536",
         "type": "color"
       }
+    },
+    "puprle": {
+      "800": {
+        "value": "#4D2F6E",
+        "type": "color"
+      }
     }
   },
   "font_family": {
