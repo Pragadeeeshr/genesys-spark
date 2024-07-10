@@ -146,12 +146,12 @@
         "type": "spacing"
       },
       "gap": {
-        "value": "{form_control.click_input.gap}",
+        "value": "{form_control.form_field.click_input.gap}",
         "type": "spacing"
       }
     },
     "gap": {
-      "value": "{form_control.click_input.gap}",
+      "value": "{form_control.form_field.click_input.gap}",
       "type": "spacing"
     },
     "disabled": {
