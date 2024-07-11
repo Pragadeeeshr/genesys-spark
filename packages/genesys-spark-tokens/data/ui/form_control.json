@@ -300,7 +300,7 @@
     },
     "focus_ring": {
       "border_radius": {
-        "value": "{border_radius.focus.small}",
+        "value": "{border_radius.form_control.input.medium}",
         "type": "borderRadius"
       }
     }
