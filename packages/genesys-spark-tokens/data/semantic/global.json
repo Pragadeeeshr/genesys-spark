@@ -334,7 +334,7 @@
       "border_radius": {
         "value": "{border_radius.interactive.small}",
         "type": "borderRadius",
-        "description": "The recommended small border-radius for interactive component. Eg Buttons"
+        "description": "This is for interactive small tokens such as small buttons."
       }
     },
     "large": {

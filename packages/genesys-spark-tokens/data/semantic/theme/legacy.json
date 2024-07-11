@@ -557,7 +557,7 @@
         "type": "borderRadius"
       },
       "small": {
-        "value": "{border_radius.sm}",
+        "value": "{border_radius.xs}",
         "type": "borderRadius"
       }
     },

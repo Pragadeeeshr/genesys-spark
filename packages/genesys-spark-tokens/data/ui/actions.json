@@ -73,6 +73,10 @@
         "value": "{background.interactive.dummy.default}",
         "type": "color"
       }
+    },
+    "border_radius": {
+      "value": "{interactive.small.border_radius}",
+      "type": "borderRadius"
     }
   }
 }
