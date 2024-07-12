@@ -547,6 +547,12 @@
           "value": "{color_legacy.blue.60}",
           "type": "color"
         }
+      },
+      "dummy": {
+        "10": {
+          "value": "{color_legacy.yellow.80}",
+          "type": "color"
+        }
       }
     }
   },

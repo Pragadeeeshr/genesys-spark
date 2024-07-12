@@ -645,7 +645,6 @@
       "container.divider.border_width": "65f3f6c9b975b3e5649b2a947e46899327c8cc1d",
       "form_control.text_input.edges.border_width": "bfd18e571bf5893dd8077db519d0d8b6c7812b31",
       "form_control.text_input.divider.border_width": "6dfd35f9ecee7867ebaac2d4314172c81c9011b2",
-      "interactive.edges.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394",
       "interactive.divider.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d",
       "background.interactive.primary.default": "0188808b7c6d3225fc85570edd14072ada698fa2",
       "background.interactive.primary.hover": "a285a137eb449419c1c85ba88c7ab91ef62bf9cf",
@@ -783,7 +782,8 @@
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
-      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc"
+      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
+      "interactive.edges.small.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394"
     }
   },
   {
@@ -834,8 +834,8 @@
       "container.divider.border_width": "65f3f6c9b975b3e5649b2a947e46899327c8cc1d",
       "form_control.text_input.edges.border_width": "bfd18e571bf5893dd8077db519d0d8b6c7812b31",
       "form_control.text_input.divider.border_width": "6dfd35f9ecee7867ebaac2d4314172c81c9011b2",
-      "interactive.edges.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394",
-      "interactive.divider.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d"
+      "interactive.divider.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d",
+      "interactive.edges.small.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394"
     }
   },
   {

@@ -77,6 +77,13 @@
     "border_radius": {
       "value": "{interactive.small.border_radius}",
       "type": "borderRadius"
+    },
+    "border": {
+      "value": {
+        "color": "{border.interactive.edges.dummy}",
+        "width": "{interactive.edges.medium.border_width}"
+      },
+      "type": "border"
     }
   }
 }

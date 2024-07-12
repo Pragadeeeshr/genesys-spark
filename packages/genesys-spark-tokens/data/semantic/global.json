@@ -345,10 +345,19 @@
       }
     },
     "edges": {
-      "border_width": {
-        "value": "{border_width.1}",
-        "type": "borderWidth",
-        "description": "The default border width for the edges of interactive components, like the ones on a tertiary(or outlined) button."
+      "small": {
+        "border_width": {
+          "value": "{border_width.1}",
+          "type": "borderWidth",
+          "description": "The small border width for the edges of interactive components, like the ones on a tertiary(or outlined) button."
+        }
+      },
+      "medium": {
+        "border_width": {
+          "value": "{border_width.2}",
+          "type": "borderWidth",
+          "description": "The medium border width for the edges of interactive components"
+        }
       }
     },
     "divider": {

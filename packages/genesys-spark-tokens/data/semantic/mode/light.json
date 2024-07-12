@@ -778,6 +778,13 @@
           "type": "color",
           "description": "The color for dividers inside interactive/danger elements."
         }
+      },
+      "edges": {
+        "dummy": {
+          "value": "{border.edges.dummy.10}",
+          "type": "color",
+          "description": "This is for edges for dummy state for interactive components"
+        }
       }
     },
     "form_control": {

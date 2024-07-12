@@ -497,6 +497,12 @@
           "value": "{color.blueberry.600}",
           "type": "color"
         }
+      },
+      "dummy": {
+        "10": {
+          "value": "{color.green.800}",
+          "type": "color"
+        }
       }
     },
     "system": {

@@ -804,6 +804,12 @@
         "value": "#4D2F6E",
         "type": "color"
       }
+    },
+    "green": {
+      "800": {
+        "value": "#EDF1A2",
+        "type": "color"
+      }
     }
   },
   "font_family": {
