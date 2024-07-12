@@ -600,8 +600,13 @@
       }
     },
     "small": {
-      "size": {
+      "width": {
         "value": "{size.5xs}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
+      },
+      "height": {
+        "value": "{size.sm}",
         "type": "sizing",
         "description": "This token is for dividers that are made with rectangles."
       }

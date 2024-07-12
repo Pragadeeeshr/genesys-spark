@@ -390,7 +390,11 @@
     },
     "divider": {
       "width": {
-        "value": "{divider.small.size}",
+        "value": "{divider.small.width}",
+        "type": "sizing"
+      },
+      "height": {
+        "value": "{divider.small.height}",
         "type": "sizing"
       }
     },
