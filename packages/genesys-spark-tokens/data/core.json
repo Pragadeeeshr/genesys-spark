@@ -824,6 +824,14 @@
     "noto_sans": {
       "value": "Noto Sans",
       "type": "fontFamilies"
+    },
+    "inter": {
+      "value": "Inter",
+      "type": "fontFamilies"
+    },
+    "montserrat": {
+      "value": "Montserrat",
+      "type": "fontFamilies"
     }
   },
   "font_size": {
@@ -850,6 +858,10 @@
     "xxl": {
       "value": "36px",
       "type": "fontSizes"
+    },
+    "3xl": {
+      "value": "36px",
+      "type": "fontSizes"
     }
   },
   "font_weight": {
@@ -863,6 +875,10 @@
     },
     "bold": {
       "value": "700",
+      "type": "fontWeights"
+    },
+    "light": {
+      "value": "300",
       "type": "fontWeights"
     }
   },
@@ -899,6 +915,10 @@
       "value": "1",
       "type": "lineHeights",
       "description": "This token is used for matching the line-height value to the font-size value on CSS; for example if you have an 8px font size property and you apply this line-height, the line-height will have the value of 8px."
+    },
+    "3xl": {
+      "value": "32px",
+      "type": "lineHeights"
     }
   },
   "elevation": {
@@ -969,6 +989,10 @@
   "text_decoration": {
     "underline": {
       "value": "underline",
+      "type": "textDecoration"
+    },
+    "line_through": {
+      "value": "line-through",
       "type": "textDecoration"
     }
   },
@@ -1450,6 +1474,10 @@
     "uppercase": {
       "value": "uppercase",
       "type": "textCase"
+    },
+    "lowercase": {
+      "value": "lowercase",
+      "type": "textCase"
     }
   },
   "opacity": {
@@ -1469,6 +1497,10 @@
   "letter_spacing": {
     "1": {
       "value": "1px",
+      "type": "letterSpacing"
+    },
+    "2": {
+      "value": "2px",
       "type": "letterSpacing"
     }
   }
