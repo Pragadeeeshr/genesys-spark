@@ -13,6 +13,10 @@
     "block_code": {
       "value": "{font_family.montserrat}",
       "type": "fontFamilies"
+    },
+    "block_code_": {
+      "value": "{font_family.noto_sans}",
+      "type": "fontFamilies"
     }
   },
   "background": {

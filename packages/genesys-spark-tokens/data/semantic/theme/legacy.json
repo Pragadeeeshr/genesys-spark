@@ -9,6 +9,10 @@
       "value": "{font_family.roboto}",
       "type": "fontFamilies",
       "description": "The font family we use for body and labels in this theme."
+    },
+    "block_code": {
+      "value": "{font_family.noto_sans}",
+      "type": "fontFamilies"
     }
   },
   "background": {
