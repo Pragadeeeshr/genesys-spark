@@ -301,13 +301,13 @@
         "description": "The recommended height of medium-sized interactive components, for example buttons."
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{spacing.4xs}",
         "type": "spacing",
         "description": "The recommended gap between the content inside of a medium-sized interactive component."
       },
       "padding": {
         "horizontal": {
-          "value": "{spacing.2xs}",
+          "value": "{spacing.3xs}",
           "type": "spacing",
           "description": "The recommended horizontal padding for medium-sized horizontal components."
         }
@@ -320,7 +320,7 @@
         "description": "The recommended size for small-sized interactive components. For example small buttons."
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{spacing.5xs}",
         "type": "spacing",
         "description": "The recommended gap between the content inside of a small-sized interactive component."
       },
@@ -342,6 +342,23 @@
         "value": "{border_radius.interactive.large}",
         "type": "borderRadius",
         "description": "The recommended large border-radius for interactive component. Eg Tags"
+      },
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended gap between the content inside of a large-sized interactive component."
+      },
+      "padding": {
+        "horizontal": {
+          "value": "{spacing.2xs}",
+          "type": "spacing",
+          "description": "The recommended horizontal padding for large-sized horizontal components."
+        },
+        "vertical": {
+          "value": "{spacing.3xs}",
+          "type": "spacing",
+          "description": "The recommended horizontal padding for large-sized vertical components."
+        }
       }
     },
     "edges": {

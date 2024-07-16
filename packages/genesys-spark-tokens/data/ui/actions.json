@@ -88,6 +88,14 @@
     "text": {
       "value": "{code_block.sm.regular}",
       "type": "typography"
+    },
+    "gap": {
+      "value": "{interactive.large.gap}",
+      "type": "spacing"
+    },
+    "padding": {
+      "value": "{interactive.large.padding.vertical} {interactive.large.padding.horizontal}",
+      "type": "spacing"
     }
   }
 }
