@@ -12,7 +12,7 @@
         "type": "color"
       },
       "padding": {
-        "value": "2px {spacing.4xs}",
+        "value": "{interactive.xsmall.padding} {interactive.small.padding}",
         "type": "spacing"
       },
       "border_radius": {
@@ -93,8 +93,12 @@
       "value": "{interactive.large.gap}",
       "type": "spacing"
     },
-    "padding": {
-      "value": "{interactive.large.padding.vertical} {interactive.large.padding.horizontal}",
+    "vertical_padding": {
+      "value": "{interactive.medium.padding}",
+      "type": "spacing"
+    },
+    "horizontal_padding": {
+      "value": "{interactive.large.padding}",
       "type": "spacing"
     }
   }

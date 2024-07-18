@@ -611,10 +611,8 @@
     "$figmaVariableReferences": {
       "interactive.medium.height": "8a539dfcb71fd7e0b92035647f128a5deb87562f",
       "interactive.medium.gap": "fb00f9856fdcd44eeba1c922b36cff5bb9c348f2",
-      "interactive.medium.padding.horizontal": "981b5dcba9ef2f27e146874f540cce8216d8df4f",
       "interactive.small.height": "e3dc8154ef194421addacd2180ec510b1a3a2e93",
       "interactive.small.gap": "7c47cfac48b815c7a864098429f0c9bd953eda31",
-      "interactive.small.padding.horizontal": "15595e64288790e0cf9b2719155291604cfc23a5",
       "interactive.large.border_radius": "2114a7e4234da145727c384e1f4b15b392417355",
       "focus.full.border_radius": "deedb2d209da54b27b6aa65e4965d70620e1bf63",
       "focus.xlarge.border_radius": "2792ff637055da90c4a7c8765b7b968dc7f8cffb",
@@ -631,10 +629,6 @@
       "form_control.form_field.gap": "2750bd35e9b9905923daf4036db448359f4c70eb",
       "form_control.text_input.gap": "1e98e892f1536f51b181e240bcb4157a5f0b1bbe",
       "container.small.gap": "1bc7d3b20a818cf11c6d8437739851334861240f",
-      "container.medium.horizontal_padding": "de00ce90236ccb57be031d1ec828571ce11c5f37",
-      "container.small.horizontal_padding": "5c70ea732daf506d254560e1806940bed2c2079c",
-      "container.small.vertical_padding": "5adba3ea8c04a34a6ac400bf14f908a3b418593c",
-      "container.medium.vertical_padding": "3755d6c1ccfa9ddde530e999fc21cd6173d7d12f",
       "container.large.padding": "91ebed5429a19f71dc70d4879ac2de11f27626f9",
       "container.large.gap": "5b8505afab3d6102d7719bbd858059389a85e46d",
       "container.small.min_height": "834fbc0e73c1b866db52ff2f634db8717cd57cee",
@@ -783,7 +777,11 @@
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
       "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
-      "interactive.edges.small.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394"
+      "interactive.edges.small.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394",
+      "interactive.medium.padding": "981b5dcba9ef2f27e146874f540cce8216d8df4f",
+      "interactive.small.padding": "15595e64288790e0cf9b2719155291604cfc23a5",
+      "container.small.padding": "5c70ea732daf506d254560e1806940bed2c2079c",
+      "container.medium.padding": "de00ce90236ccb57be031d1ec828571ce11c5f37"
     }
   },
   {
@@ -800,10 +798,8 @@
     "$figmaVariableReferences": {
       "interactive.medium.height": "8a539dfcb71fd7e0b92035647f128a5deb87562f",
       "interactive.medium.gap": "fb00f9856fdcd44eeba1c922b36cff5bb9c348f2",
-      "interactive.medium.padding.horizontal": "981b5dcba9ef2f27e146874f540cce8216d8df4f",
       "interactive.small.height": "e3dc8154ef194421addacd2180ec510b1a3a2e93",
       "interactive.small.gap": "7c47cfac48b815c7a864098429f0c9bd953eda31",
-      "interactive.small.padding.horizontal": "15595e64288790e0cf9b2719155291604cfc23a5",
       "interactive.large.border_radius": "2114a7e4234da145727c384e1f4b15b392417355",
       "focus.full.border_radius": "deedb2d209da54b27b6aa65e4965d70620e1bf63",
       "focus.xlarge.border_radius": "2792ff637055da90c4a7c8765b7b968dc7f8cffb",
@@ -820,10 +816,6 @@
       "form_control.form_field.gap": "2750bd35e9b9905923daf4036db448359f4c70eb",
       "form_control.text_input.gap": "1e98e892f1536f51b181e240bcb4157a5f0b1bbe",
       "container.small.gap": "1bc7d3b20a818cf11c6d8437739851334861240f",
-      "container.medium.horizontal_padding": "de00ce90236ccb57be031d1ec828571ce11c5f37",
-      "container.small.horizontal_padding": "5c70ea732daf506d254560e1806940bed2c2079c",
-      "container.small.vertical_padding": "5adba3ea8c04a34a6ac400bf14f908a3b418593c",
-      "container.medium.vertical_padding": "3755d6c1ccfa9ddde530e999fc21cd6173d7d12f",
       "container.large.padding": "91ebed5429a19f71dc70d4879ac2de11f27626f9",
       "container.large.gap": "5b8505afab3d6102d7719bbd858059389a85e46d",
       "container.small.min_height": "834fbc0e73c1b866db52ff2f634db8717cd57cee",
@@ -835,7 +827,11 @@
       "form_control.text_input.edges.border_width": "bfd18e571bf5893dd8077db519d0d8b6c7812b31",
       "form_control.text_input.divider.border_width": "6dfd35f9ecee7867ebaac2d4314172c81c9011b2",
       "interactive.divider.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d",
-      "interactive.edges.small.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394"
+      "interactive.edges.small.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394",
+      "interactive.medium.padding": "981b5dcba9ef2f27e146874f540cce8216d8df4f",
+      "interactive.small.padding": "15595e64288790e0cf9b2719155291604cfc23a5",
+      "container.small.padding": "5c70ea732daf506d254560e1806940bed2c2079c",
+      "container.medium.padding": "de00ce90236ccb57be031d1ec828571ce11c5f37"
     }
   },
   {

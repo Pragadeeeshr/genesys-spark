@@ -306,11 +306,9 @@
         "description": "The recommended gap between the content inside of a medium-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.3xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for medium-sized horizontal components."
-        }
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for medium-sized horizontal components."
       }
     },
     "small": {
@@ -325,11 +323,9 @@
         "description": "The recommended gap between the content inside of a small-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.4xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for small-sized horizontal components."
-        }
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for small-sized horizontal components."
       },
       "border_radius": {
         "value": "{border_radius.interactive.small}",
@@ -346,19 +342,12 @@
       "gap": {
         "value": "{spacing.3xs}",
         "type": "spacing",
-        "description": "The recommended gap between the content inside of a large-sized interactive component."
+        "description": "The recommended large gap between the content inside of a large-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.2xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for large-sized horizontal components."
-        },
-        "vertical": {
-          "value": "{spacing.3xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for large-sized vertical components."
-        }
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The recommended padding for large-sized horizontal components."
       }
     },
     "edges": {
@@ -382,6 +371,13 @@
         "value": "{border_width.1}",
         "type": "borderWidth",
         "description": "The default border width for the dividers within interactive components, like the ones on an action button."
+      }
+    },
+    "xsmall": {
+      "padding": {
+        "value": "{spacing.5xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for medium-sized horizontal components."
       }
     }
   },
@@ -458,20 +454,15 @@
         "type": "borderRadius",
         "description": "The recommended small border-radius for containers. Eg in-line alert"
       },
-      "gap": {
-        "value": "{spacing.3xs}",
-        "type": "spacing",
-        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
-      },
-      "horizontal_padding": {
+      "padding": {
         "value": "{spacing.2xs}",
         "type": "spacing",
         "description": "The default padding of a small-sized container, like a tooltip."
       },
-      "vertical_padding": {
-        "value": "{spacing.2xs}",
+      "gap": {
+        "value": "{spacing.3xs}",
         "type": "spacing",
-        "description": "The default vertical padding of a small-sized container, like a tooltip."
+        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
       },
       "min_height": {
         "value": "{size.sm}",
@@ -490,15 +481,10 @@
         "type": "borderRadius",
         "description": "The recommended medium border-radius for containers. Eg cards"
       },
-      "horizontal_padding": {
+      "padding": {
         "value": "{spacing.md}",
         "type": "spacing",
         "description": "The default horizontal padding of a medium-sized container, like a card."
-      },
-      "vertical_padding": {
-        "value": "{spacing.md}",
-        "type": "spacing",
-        "description": "The default vertical padding of a medium-sized container, like a tooltip."
       },
       "min_height": {
         "value": "{size.lg}",
