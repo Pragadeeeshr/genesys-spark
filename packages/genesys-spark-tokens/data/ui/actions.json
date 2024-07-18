@@ -72,6 +72,10 @@
       "background_color": {
         "value": "{background.interactive.dummy.default}",
         "type": "color"
+      },
+      "foregroud_color": {
+        "value": "{foreground.interactive.dummy.default}",
+        "type": "color"
       }
     },
     "border_radius": {

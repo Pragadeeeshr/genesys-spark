@@ -440,6 +440,12 @@
         "value": "{color_legacy.secondary.electric_purple}",
         "type": "color"
       }
+    },
+    "dummy": {
+      "10": {
+        "value": "{color.green.800}",
+        "type": "color"
+      }
     }
   },
   "border": {

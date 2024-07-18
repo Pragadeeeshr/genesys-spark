@@ -469,6 +469,13 @@
           "type": "color",
           "description": "The  color of links when  they were already visited."
         }
+      },
+      "dummy": {
+        "default": {
+          "value": "{foreground.dummy.10}",
+          "type": "color",
+          "description": "This is default color for interactive dummy elements."
+        }
       }
     },
     "surface": {
