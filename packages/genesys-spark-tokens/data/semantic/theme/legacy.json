@@ -84,6 +84,12 @@
           "value": "{color.black}",
           "type": "color"
         }
+      },
+      "dummy": {
+        "10": {
+          "value": "{color.puprle.800}",
+          "type": "color"
+        }
       }
     },
     "form_control": {
