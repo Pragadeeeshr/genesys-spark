@@ -102,13 +102,6 @@
           "type": "color",
           "description": "The background color of danger actions in the active state."
         }
-      },
-      "dummy": {
-        "default": {
-          "value": "{background.surface.dummy.10}",
-          "type": "color",
-          "description": "This is default color for interactive dummy elements."
-        }
       }
     },
     "overlay": {
@@ -468,13 +461,6 @@
           "value": "{foreground.link.40}",
           "type": "color",
           "description": "The  color of links when  they were already visited."
-        }
-      },
-      "dummy": {
-        "default": {
-          "value": "{foreground.dummy.10}",
-          "type": "color",
-          "description": "This is default color for interactive dummy elements."
         }
       }
     },

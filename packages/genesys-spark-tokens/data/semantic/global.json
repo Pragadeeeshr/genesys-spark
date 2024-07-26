@@ -585,22 +585,5 @@
         "description": "The shadow we used for small-sized components like tooltips."
       }
     }
-  },
-  "code_block": {
-    "sm": {
-      "regular": {
-        "value": {
-          "fontFamily": "{font_family.block_code}",
-          "fontWeight": "{font_weight.light}",
-          "fontSize": "{font_size.3xl}",
-          "lineHeight": "{line_height.2xs}",
-          "letterSpacing": "{letter_spacing.2}",
-          "textDecoration": "{text_decoration.line_through}",
-          "textCase": "{text_case.lowercase}"
-        },
-        "type": "typography",
-        "description": "This style use used for code blocks."
-      }
-    }
   }
 }

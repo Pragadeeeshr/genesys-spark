@@ -9,10 +9,6 @@
       "value": "{font_family.roboto}",
       "type": "fontFamilies",
       "description": "The font family we use for body and labels in this theme."
-    },
-    "block_code": {
-      "value": "{font_family.noto_sans}",
-      "type": "fontFamilies"
     }
   },
   "background": {
@@ -82,12 +78,6 @@
         },
         "40": {
           "value": "{color.black}",
-          "type": "color"
-        }
-      },
-      "dummy": {
-        "10": {
-          "value": "{color.puprle.800}",
           "type": "color"
         }
       }
@@ -446,12 +436,6 @@
         "value": "{color_legacy.secondary.electric_purple}",
         "type": "color"
       }
-    },
-    "dummy": {
-      "10": {
-        "value": "{color.green.800}",
-        "type": "color"
-      }
     }
   },
   "border": {
@@ -561,12 +545,6 @@
       "active": {
         "10": {
           "value": "{color_legacy.blue.60}",
-          "type": "color"
-        }
-      },
-      "dummy": {
-        "10": {
-          "value": "{color_legacy.yellow.80}",
           "type": "color"
         }
       }

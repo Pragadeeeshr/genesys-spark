@@ -9,14 +9,6 @@
       "value": "{font_family.noto_sans}",
       "type": "fontFamilies",
       "description": "The font family we use for body and labels in this theme."
-    },
-    "block_code": {
-      "value": "{font_family.montserrat}",
-      "type": "fontFamilies"
-    },
-    "block_code_": {
-      "value": "{font_family.noto_sans}",
-      "type": "fontFamilies"
     }
   },
   "background": {
@@ -86,12 +78,6 @@
         },
         "40": {
           "value": "{color.black}",
-          "type": "color"
-        }
-      },
-      "dummy": {
-        "10": {
-          "value": "{color.puprle.800}",
           "type": "color"
         }
       }
@@ -450,12 +436,6 @@
         "value": "{color.plum.700}",
         "type": "color"
       }
-    },
-    "dummy": {
-      "10": {
-        "value": "{color.green.800}",
-        "type": "color"
-      }
     }
   },
   "border": {
@@ -509,12 +489,6 @@
       "active": {
         "10": {
           "value": "{color.blueberry.600}",
-          "type": "color"
-        }
-      },
-      "dummy": {
-        "10": {
-          "value": "{color.green.800}",
           "type": "color"
         }
       }
