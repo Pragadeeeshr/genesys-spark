@@ -600,6 +600,15 @@
         "value": "{spacing.4xs}",
         "type": "spacing",
         "description": "The default gap for between elements inside a form field, like textfields, text areas."
+      },
+      "grouped_input": {
+        "nested": {
+          "padding": {
+            "value": "{spacing.md}",
+            "type": "spacing",
+            "description": "The recommended padding for nested form input group. like nested chckbox"
+          }
+        }
       }
     }
   },

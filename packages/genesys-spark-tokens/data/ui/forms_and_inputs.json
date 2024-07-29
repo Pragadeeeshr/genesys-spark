@@ -191,6 +191,16 @@
         "value": "{spacing.3xs}",
         "type": "spacing"
       }
+    },
+    "nested_group": {
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing"
+      },
+      "padding": {
+        "value": "{form_control.form_field.grouped_input.nested.padding}",
+        "type": "spacing"
+      }
     }
   },
   "menu": {
