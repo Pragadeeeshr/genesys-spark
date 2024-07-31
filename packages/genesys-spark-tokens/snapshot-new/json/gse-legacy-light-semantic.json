@@ -723,7 +723,12 @@
       }
     },
     "form_field": {
-      "gap": "4px"
+      "gap": "4px",
+      "grouped_input": {
+        "nested": {
+          "padding": "24px"
+        }
+      }
     }
   },
   "contanier": {

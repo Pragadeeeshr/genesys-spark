@@ -914,6 +914,10 @@
     },
     "group": {
       "gap": "8px"
+    },
+    "nested_group": {
+      "gap": "8px",
+      "padding": "24px"
     }
   },
   "menu": {
