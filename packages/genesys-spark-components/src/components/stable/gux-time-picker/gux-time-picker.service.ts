@@ -46,26 +46,18 @@ function applyHourBoundaries(
   // TODO: should I validate min and/or max prop's format that's passed in by the developer or is that unnecessary?
 
   if (min) {
-    // Converting the min value to a number so it's easier to do a value comparison for each hour option.
-    //  (e.g. a min value of '5:30' would be converted to '530' and then this number is compared to each hour option that is also converted to a number)
-    const minFormatted = min.startsWith('12:') ? `.${min}` : min;
-    const minAsNumber = minFormatted
-      ? parseFloat(minFormatted.replace(':', ''))
-      : 0;
     hourOptionsFiltered = hourOptionsFiltered.filter(
-      hour => parseFloat(formatHourOption(clockType, hour)) > minAsNumber
+      hour =>
+        parseFloat(formatHourOption(clockType, hour)) >
+        parseFloat(formatHourOption(clockType, min))
     );
   }
 
   if (max) {
-    // Converting the max value to a number so it's easier to do a value comparison for each hour option.
-    //  (e.g. a max value of '5:30' would be converted to '530' and then this number is compared to each hour option that is also converted to a number)
-    const maxFormatted = max.startsWith('12:') ? `.${max}` : max;
-    const maxAsNumber = maxFormatted
-      ? parseFloat(maxFormatted.replace(':', ''))
-      : 0;
     hourOptionsFiltered = hourOptionsFiltered.filter(
-      hour => parseFloat(formatHourOption(clockType, hour)) < maxAsNumber
+      hour =>
+        parseFloat(formatHourOption(clockType, hour)) <
+        parseFloat(formatHourOption(clockType, max))
     );
   }
 
