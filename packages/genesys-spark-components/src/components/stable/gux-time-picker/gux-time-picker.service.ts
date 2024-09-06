@@ -46,27 +46,38 @@ function applyHourBoundaries(
   // TODO: should I validate min and/or max prop's format that's passed in by the developer or is that unnecessary?
 
   if (min) {
-    if (clockType === '12h' && !min.includes('12:')) {
-      // If min value's hour is not 12 then remove it as an option
-      hourOptionsFiltered = hourOptions.filter(h => !h.includes('12:'));
-    }
-
-    const minAsNumber = min ? parseInt(min.replace(':', ''), 10) : 0;
-    hourOptionsFiltered = hourOptionsFiltered.filter(hour => {
-      const hourAsNumber = hour.replace(':', '');
-      return parseInt(hourAsNumber, 10) > minAsNumber;
-    });
+    // Converting the min value to a number so it's easier to do a value comparison for each hour option.
+    //  (e.g. a min value of '5:30' would be converted to '530' and then this number is compared to each hour option that is also converted to a number)
+    const minFormatted = min.startsWith('12:') ? `.${min}` : min;
+    const minAsNumber = minFormatted
+      ? parseFloat(minFormatted.replace(':', ''))
+      : 0;
+    hourOptionsFiltered = hourOptionsFiltered.filter(
+      hour => parseFloat(formatHourOption(clockType, hour)) > minAsNumber
+    );
   }
 
   if (max) {
-    const maxAsNumber = min ? parseInt(max.replace(':', ''), 10) : 0;
-    hourOptionsFiltered = hourOptionsFiltered.filter(hour => {
-      const hourAsNumber = hour.replace(':', '');
-      return parseInt(hourAsNumber, 10) < maxAsNumber;
-    });
+    // Converting the max value to a number so it's easier to do a value comparison for each hour option.
+    //  (e.g. a max value of '5:30' would be converted to '530' and then this number is compared to each hour option that is also converted to a number)
+    const maxFormatted = max.startsWith('12:') ? `.${max}` : max;
+    const maxAsNumber = maxFormatted
+      ? parseFloat(maxFormatted.replace(':', ''))
+      : 0;
+    hourOptionsFiltered = hourOptionsFiltered.filter(
+      hour => parseFloat(formatHourOption(clockType, hour)) < maxAsNumber
+    );
   }
 
   return hourOptionsFiltered as GuxISOHourMinute[];
+}
+
+function formatHourOption(clockType: GuxClockType, hour: string) {
+  // The 12h clock type will have hour 12 options at the front of the list so I'm putting a decimal point in front of them so that when they're converted to a number
+  // their value is less than all of the other hour options, which makes comparing them to the min/max values easier
+  return (
+    clockType === '12h' && hour.startsWith('12:') ? `.${hour}` : hour
+  ).replace(':', '');
 }
 
 export function getLocaleClockType(root: HTMLElement): GuxClockType {

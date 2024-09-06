@@ -323,9 +323,9 @@ describe('gux-time-picker.service', () => {
         expectedOutput: GuxISOHourMinute[];
       }) => {
         it(`should work as expected for ${clockType} with ${minuteInterval} minute intervals`, async () => {
-          expect(getTimeDisplayValues(minuteInterval, clockType)).toStrictEqual(
-            expectedOutput
-          );
+          expect(
+            getTimeDisplayValues(minuteInterval, clockType, '0', '5:00')
+          ).toStrictEqual(expectedOutput);
         });
       }
     );
