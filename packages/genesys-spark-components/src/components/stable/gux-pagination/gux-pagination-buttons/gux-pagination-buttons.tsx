@@ -38,6 +38,9 @@ export class GuxPaginationButtons {
   @Prop()
   layout: GuxPaginationLayout = 'advanced';
 
+  @Prop()
+  disabled: boolean = false;
+
   @Event({ bubbles: false })
   private internalcurrentpagechange: EventEmitter<number>;
 
@@ -92,6 +95,7 @@ export class GuxPaginationButtons {
         return acc.concat(
           (
             <button
+              disabled={this.disabled}
               ref={el => (this.currentElement = el)}
               class="gux-pagination-buttons-list-current"
               aria-label={this.i18n('pageSelected', {
@@ -107,7 +111,10 @@ export class GuxPaginationButtons {
       if (cv.display == '...') {
         return acc.concat(
           (
-            <gux-pagination-ellipsis-button totalPages={this.totalPages} />
+            <gux-pagination-ellipsis-button
+              disabled={this.disabled}
+              totalPages={this.totalPages}
+            />
           ) as JSX.Element
         );
       }
@@ -116,6 +123,7 @@ export class GuxPaginationButtons {
         (
           <button
             class="gux-pagination-buttons-list-target"
+            disabled={this.disabled}
             onClick={() => this.handlePageChange(cv.pageNumber)}
             aria-label={this.i18n('pageNumber', {
               pageNumber: cv.pageNumber
@@ -151,7 +159,7 @@ export class GuxPaginationButtons {
           <gux-button-slot accent="ghost">
             <button
               title={this.i18n('firstPage')}
-              disabled={this.onFirstPage}
+              disabled={this.onFirstPage || this.disabled}
               onClick={this.handleClickFirst.bind(this)}
             >
               <gux-icon
@@ -163,7 +171,7 @@ export class GuxPaginationButtons {
           <gux-button-slot accent="ghost">
             <button
               title={this.i18n('previousPage')}
-              disabled={this.onFirstPage}
+              disabled={this.onFirstPage || this.disabled}
               onClick={this.handleClickPrevious.bind(this)}
             >
               <gux-icon
@@ -180,7 +188,7 @@ export class GuxPaginationButtons {
           <gux-button-slot accent="ghost">
             <button
               title={this.i18n('nextPage')}
-              disabled={this.onLastPage}
+              disabled={this.onLastPage || this.disabled}
               onClick={this.handleClickNext.bind(this)}
             >
               <gux-icon
@@ -192,7 +200,7 @@ export class GuxPaginationButtons {
           <gux-button-slot accent="ghost">
             <button
               title={this.i18n('lastPage')}
-              disabled={this.onLastPage}
+              disabled={this.onLastPage || this.disabled}
               onClick={this.handleClickLast.bind(this)}
             >
               <gux-icon

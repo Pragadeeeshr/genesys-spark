@@ -37,6 +37,9 @@ export class GuxPaginationEllipsisButton {
   @Prop()
   totalPages: number;
 
+  @Prop()
+  disabled: boolean = false;
+
   @Event() goToPage: EventEmitter<string>;
 
   @Listen('keydown')
@@ -130,6 +133,7 @@ export class GuxPaginationEllipsisButton {
         <button
           id="popover-target"
           type="button"
+          disabled={this.disabled}
           ref={el => (this.ellipsisButton = el)}
           onClick={() => this.toggle()}
           aria-haspopup="true"

@@ -36,65 +36,112 @@ describe('gux-pagination', () => {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 25,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
       {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 50,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
       {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 75,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
       {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 100,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
       {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 25,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
       {
         currentPage: 10,
         totalItems: 1000,
         itemsPerPage: 25,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
       {
         currentPage: 10,
         totalItems: 1000,
         itemsPerPage: 50,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
       {
         currentPage: 10,
         totalItems: 1000,
         itemsPerPage: 75,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
       {
         currentPage: 10,
         totalItems: 1000,
         itemsPerPage: 100,
-        layout: 'advanced'
+        layout: 'advanced',
+        disabled: false
       },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'simple' }
-    ].forEach(({ currentPage, totalItems, itemsPerPage, layout }, index) => {
-      it(`should render as expected (${index + 1})`, async () => {
-        const html = `
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 100,
+        layout: 'advanced',
+        disabled: true
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'simple',
+        disabled: false
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'simple',
+        disabled: true
+      }
+    ].forEach(
+      ({ currentPage, totalItems, itemsPerPage, layout, disabled }, index) => {
+        it(`should render as expected (${index + 1})`, async () => {
+          const html = `
           <gux-pagination lang="en"
             current-page="${currentPage}"
             total-items="${totalItems}"
             items-per-page="${itemsPerPage}"
             layout="${layout}"
+            disabled="${disabled}"
+           >
+          </gux-pagination>
+        `;
+          const page = await newNonrandomE2EPage({ html });
+          const element = await page.find('gux-pagination');
+          await a11yCheck(page, axeExclusions);
+
+          expect(element.outerHTML).toMatchSnapshot();
+        });
+      }
+    );
+
+    describe('with slot', () => {
+      it('should render as expected', async () => {
+        const html = `
+          <gux-pagination lang="en"
           ></gux-pagination>
         `;
         const page = await newNonrandomE2EPage({ html });

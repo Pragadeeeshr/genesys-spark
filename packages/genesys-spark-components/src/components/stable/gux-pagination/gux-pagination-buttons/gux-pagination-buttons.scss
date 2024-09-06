@@ -65,6 +65,11 @@ gux-pagination-buttons {
             var(--gse-semantic-color-focus);
           outline-offset: var(--gse-semantic-focusRing-offset);
         }
+
+        &:disabled {
+          pointer-events: none;
+          opacity: 0.5; // TODO: Use token
+        }
       }
 
       .gux-pagination-buttons-list-current {

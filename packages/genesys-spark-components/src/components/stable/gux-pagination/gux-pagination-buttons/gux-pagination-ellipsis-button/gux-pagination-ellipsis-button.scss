@@ -8,6 +8,11 @@ button {
     color: var(--gse-ui-button-ghost-hover-foregroundColor);
   }
 
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5; // TODO: Use token
+  }
+
   &:focus-visible {
     border-radius: calc(
       var(--gse-semantic-focusRing-cornerRadius) - var(
