@@ -67,6 +67,12 @@ export class GuxTimePicker {
   @Prop({ mutable: true })
   clockType: GuxClockType;
 
+  @Prop()
+  min?: string;
+
+  @Prop()
+  max?: string;
+
   @State()
   expanded: boolean = false;
 
@@ -343,20 +349,23 @@ export class GuxTimePicker {
   }
 
   private renderTimeListItems(): JSX.Element[] {
-    return getTimeDisplayValues(this.interval, this.clockType).map(
-      displayValue => {
-        const value = getValue(displayValue, this.clockType, isAm(this.value));
+    return getTimeDisplayValues(
+      this.interval,
+      this.clockType,
+      this.min,
+      this.max
+    ).map(displayValue => {
+      const value = getValue(displayValue, this.clockType, isAm(this.value));
 
-        return (
-          <gux-list-item
-            id={this.valueToId(value)}
-            onClick={() => this.handleClickDropdownValue(displayValue)}
-          >
-            {displayValue}
-          </gux-list-item>
-        ) as JSX.Element;
-      }
-    );
+      return (
+        <gux-list-item
+          id={this.valueToId(value)}
+          onClick={() => this.handleClickDropdownValue(displayValue)}
+        >
+          {displayValue}
+        </gux-list-item>
+      ) as JSX.Element;
+    });
   }
 
   private renderTarget(): JSX.Element {

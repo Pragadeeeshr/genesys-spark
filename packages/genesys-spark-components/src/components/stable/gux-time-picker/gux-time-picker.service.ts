@@ -12,7 +12,9 @@ import {
 
 export function getTimeDisplayValues(
   minuteInterval: GuxMinuteInterval,
-  clockType: GuxClockType
+  clockType: GuxClockType,
+  min: string,
+  max: string
 ): GuxISOHourMinute[] {
   const minuteOptions = [0, 15, 30, 45]
     .filter(option => Number.isInteger(option / minuteInterval))
@@ -22,13 +24,49 @@ export function getTimeDisplayValues(
       ? ['12', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
       : Array.from(Array(24).keys()).map(x => String(x).padStart(2, '0'));
 
-  return hourOptions.reduce((acc, hourOption) => {
+  const hourOptionsFormatted = hourOptions.reduce((acc, hourOption) => {
     return acc.concat(
       minuteOptions.map(
         minuteOption => `${hourOption}:${minuteOption}`
       ) as GuxISOHourMinute[]
     );
   }, [] as GuxISOHourMinute[]);
+
+  return applyHourBoundaries(clockType, min, max, hourOptionsFormatted);
+}
+
+function applyHourBoundaries(
+  clockType: GuxClockType,
+  min: string,
+  max: string,
+  hourOptions: string[]
+) {
+  let hourOptionsFiltered = [...hourOptions];
+
+  // TODO: should I validate min and/or max prop's format that's passed in by the developer or is that unnecessary?
+
+  if (min) {
+    if (clockType === '12h' && !min.includes('12:')) {
+      // If min value's hour is not 12 then remove it as an option
+      hourOptionsFiltered = hourOptions.filter(h => !h.includes('12:'));
+    }
+
+    const minAsNumber = min ? parseInt(min.replace(':', ''), 10) : 0;
+    hourOptionsFiltered = hourOptionsFiltered.filter(hour => {
+      const hourAsNumber = hour.replace(':', '');
+      return parseInt(hourAsNumber, 10) > minAsNumber;
+    });
+  }
+
+  if (max) {
+    const maxAsNumber = min ? parseInt(max.replace(':', ''), 10) : 0;
+    hourOptionsFiltered = hourOptionsFiltered.filter(hour => {
+      const hourAsNumber = hour.replace(':', '');
+      return parseInt(hourAsNumber, 10) < maxAsNumber;
+    });
+  }
+
+  return hourOptionsFiltered as GuxISOHourMinute[];
 }
 
 export function getLocaleClockType(root: HTMLElement): GuxClockType {
