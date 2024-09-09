@@ -13,8 +13,8 @@ import {
 export function getTimeDisplayValues(
   minuteInterval: GuxMinuteInterval,
   clockType: GuxClockType,
-  min: string,
-  max: string
+  min?: string,
+  max?: string
 ): GuxISOHourMinute[] {
   const minuteOptions = [0, 15, 30, 45]
     .filter(option => Number.isInteger(option / minuteInterval))
@@ -32,14 +32,14 @@ export function getTimeDisplayValues(
     );
   }, [] as GuxISOHourMinute[]);
 
-  return applyHourBoundaries(clockType, min, max, hourOptionsFormatted);
+  return applyHourBoundaries(clockType, hourOptionsFormatted, min, max);
 }
 
 function applyHourBoundaries(
   clockType: GuxClockType,
-  min: string,
-  max: string,
-  hourOptions: string[]
+  hourOptions: string[],
+  min?: string,
+  max?: string
 ) {
   let hourOptionsFiltered = [...hourOptions];
 

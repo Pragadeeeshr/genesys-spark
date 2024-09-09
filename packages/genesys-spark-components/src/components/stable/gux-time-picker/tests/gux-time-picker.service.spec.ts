@@ -323,12 +323,77 @@ describe('gux-time-picker.service', () => {
         expectedOutput: GuxISOHourMinute[];
       }) => {
         it(`should work as expected for ${clockType} with ${minuteInterval} minute intervals`, async () => {
-          expect(
-            getTimeDisplayValues(minuteInterval, clockType, '0', '5:00')
-          ).toStrictEqual(expectedOutput);
+          expect(getTimeDisplayValues(minuteInterval, clockType)).toStrictEqual(
+            expectedOutput
+          );
         });
       }
     );
+  });
+
+  describe('#getTimeDisplayValues with set boundaries', () => {
+    it(`should work as expected for 24h with 30 minute intervals and boundaries of 11:00-20:00`, async () => {
+      const minuteInterval = 30;
+      const clockType = '24h';
+      const min = '11:00';
+      const max = '20:00';
+      const expectedOutput = [
+        '11:30',
+        '12:00',
+        '12:30',
+        '13:00',
+        '13:30',
+        '14:00',
+        '14:30',
+        '15:00',
+        '15:30',
+        '16:00',
+        '16:30',
+        '17:00',
+        '17:30',
+        '18:00',
+        '18:30',
+        '19:00',
+        '19:30'
+      ];
+
+      expect(
+        getTimeDisplayValues(minuteInterval, clockType, min, max)
+      ).toStrictEqual(expectedOutput);
+    });
+
+    it(`should work as expected for 12h with 15 minute intervals and boundaries of 12:15-5:30`, async () => {
+      const minuteInterval = 15;
+      const clockType = '12h';
+      const min = '12:15';
+      const max = '05:30';
+      const expectedOutput = [
+        '00:30',
+        '00:45',
+        '01:00',
+        '01:15',
+        '01:30',
+        '01:45',
+        '02:00',
+        '02:15',
+        '02:30',
+        '02:45',
+        '03:00',
+        '03:15',
+        '03:30',
+        '03:45',
+        '04:00',
+        '04:15',
+        '04:30',
+        '04:45',
+        '05:00',
+        '05:15'
+      ];
+
+      expect(
+        getTimeDisplayValues(minuteInterval, clockType, min, max)
+      ).toStrictEqual(expectedOutput);
+    });
   });
 
   describe('#getLocaleClockType', () => {
