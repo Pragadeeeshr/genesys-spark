@@ -8,7 +8,8 @@ import {
   Host,
   Prop,
   Event,
-  EventEmitter
+  EventEmitter,
+  Watch
 } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
@@ -78,6 +79,13 @@ export class GuxPaginationEllipsisButton {
         }
         break;
       }
+    }
+  }
+
+  @Watch('disabled')
+  watchIsOpen(newValue: boolean): void {
+    if (newValue) {
+      this.isOpen = false;
     }
   }
 
