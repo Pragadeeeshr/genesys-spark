@@ -41,32 +41,33 @@ function applyHourBoundaries(
   min?: string,
   max?: string
 ) {
-  let hourOptionsFiltered = [...hourOptions];
+  let hours = [...hourOptions];
 
-  // TODO: should I validate min and/or max prop's format that's passed in by the developer or is that unnecessary?
+  // TODO: should I validate min and/or max prop's format that's passed in or is that unnecessary?
 
   if (min) {
-    hourOptionsFiltered = hourOptionsFiltered.filter(
+    hours = hours.filter(
       hour =>
-        parseFloat(formatHourOption(clockType, hour)) >
-        parseFloat(formatHourOption(clockType, min))
+        parseFloat(formatHour(clockType, hour)) >
+        parseFloat(formatHour(clockType, min))
     );
   }
 
   if (max) {
-    hourOptionsFiltered = hourOptionsFiltered.filter(
+    hours = hours.filter(
       hour =>
-        parseFloat(formatHourOption(clockType, hour)) <
-        parseFloat(formatHourOption(clockType, max))
+        parseFloat(formatHour(clockType, hour)) <
+        parseFloat(formatHour(clockType, max))
     );
   }
 
-  return hourOptionsFiltered as GuxISOHourMinute[];
+  return hours as GuxISOHourMinute[];
 }
 
-function formatHourOption(clockType: GuxClockType, hour: string) {
-  // The 12h clock type will have hour 12 options at the front of the list so I'm putting a decimal point in front of them so that when they're converted to a number
-  // their value is less than all of the other hour options, which makes comparing them to the min/max values easier
+function formatHour(clockType: GuxClockType, hour: string) {
+  // The 12h clock type will have all "12:xx" hour options at the front of the list so I'm putting a decimal point in front of these so
+  // that when the hour list is converted to numbers then the list will be ordered ascending. We need the hour list in ascending order so that
+  // we can set min/max boundaries if the min and max props are set
   return (
     clockType === '12h' && hour.startsWith('12:') ? `.${hour}` : hour
   ).replace(':', '');
