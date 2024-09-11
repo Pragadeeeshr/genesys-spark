@@ -10,8 +10,10 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 25
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -21,49 +23,73 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="40"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 40" class="gux-pagination-buttons-list-target">
-                40
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 40">
+                  40
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -83,8 +109,10 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 25
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -94,49 +122,73 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current" disabled="">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target" disabled="">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target" disabled="">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target" disabled="">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target" disabled="">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current" disabled="">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2" disabled="">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3" disabled="">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4" disabled="">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5" disabled="">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button disabled="" totalpages="40"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 40" class="gux-pagination-buttons-list-target" disabled="">
-                40
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 40" disabled="">
+                  40
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -156,8 +208,10 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 50
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -167,49 +221,73 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="20">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="20"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 20" class="gux-pagination-buttons-list-target">
-                20
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 20">
+                  20
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -229,8 +307,10 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 75
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -240,49 +320,73 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="14">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="14"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 14" class="gux-pagination-buttons-list-target">
-                14
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 14">
+                  14
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -302,8 +406,10 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 100
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -313,49 +419,73 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="10">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="10"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 10" class="gux-pagination-buttons-list-target">
-                10
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 10">
+                  10
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -375,8 +505,10 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 25
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -386,49 +518,73 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="40"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 40" class="gux-pagination-buttons-list-target">
-                40
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 40">
+                  40
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -448,8 +604,10 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
             <span class="gux-pagination-item-counts-range">
               226 - 250
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -459,47 +617,69 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
         <gux-pagination-buttons current-page="10" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1" class="gux-pagination-buttons-list-target">
-                1
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1">
+                  1
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="40"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 9" class="gux-pagination-buttons-list-target">
-                9
-              </button>
-              <button aria-label="Page 10 selected" class="gux-pagination-buttons-list-current">
-                10
-              </button>
-              <button aria-label="Page 11" class="gux-pagination-buttons-list-target">
-                11
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 9">
+                  9
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 10 selected" class="gux-pagination-buttons-list-current">
+                  10
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 11">
+                  11
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="40"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 40" class="gux-pagination-buttons-list-target">
-                40
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 40">
+                  40
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -519,8 +699,10 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
             <span class="gux-pagination-item-counts-range">
               451 - 500
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -530,47 +712,69 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
         <gux-pagination-buttons current-page="10" total-pages="20">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1" class="gux-pagination-buttons-list-target">
-                1
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1">
+                  1
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="20"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 9" class="gux-pagination-buttons-list-target">
-                9
-              </button>
-              <button aria-label="Page 10 selected" class="gux-pagination-buttons-list-current">
-                10
-              </button>
-              <button aria-label="Page 11" class="gux-pagination-buttons-list-target">
-                11
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 9">
+                  9
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 10 selected" class="gux-pagination-buttons-list-current">
+                  10
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 11">
+                  11
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="20"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 20" class="gux-pagination-buttons-list-target">
-                20
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 20">
+                  20
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -590,8 +794,10 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
             <span class="gux-pagination-item-counts-range">
               676 - 750
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -601,47 +807,69 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
         <gux-pagination-buttons current-page="10" total-pages="14">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1" class="gux-pagination-buttons-list-target">
-                1
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1">
+                  1
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="14"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 9" class="gux-pagination-buttons-list-target">
-                9
-              </button>
-              <button aria-label="Page 10 selected" class="gux-pagination-buttons-list-current">
-                10
-              </button>
-              <button aria-label="Page 11" class="gux-pagination-buttons-list-target">
-                11
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 9">
+                  9
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 10 selected" class="gux-pagination-buttons-list-current">
+                  10
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 11">
+                  11
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="14"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 14" class="gux-pagination-buttons-list-target">
-                14
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 14">
+                  14
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -661,8 +889,10 @@ exports[`gux-pagination #render should render as expected (10) 1`] = `
             <span class="gux-pagination-item-counts-range">
               901 - 1,000
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -672,49 +902,73 @@ exports[`gux-pagination #render should render as expected (10) 1`] = `
         <gux-pagination-buttons current-page="10" total-pages="10">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1" class="gux-pagination-buttons-list-target">
-                1
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1">
+                  1
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="10"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 6" class="gux-pagination-buttons-list-target">
-                6
-              </button>
-              <button aria-label="Page 7" class="gux-pagination-buttons-list-target">
-                7
-              </button>
-              <button aria-label="Page 8" class="gux-pagination-buttons-list-target">
-                8
-              </button>
-              <button aria-label="Page 9" class="gux-pagination-buttons-list-target">
-                9
-              </button>
-              <button aria-label="Page 10 selected" class="gux-pagination-buttons-list-current">
-                10
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 6">
+                  6
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 7">
+                  7
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 8">
+                  8
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 9">
+                  9
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 10 selected" class="gux-pagination-buttons-list-current">
+                  10
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -734,8 +988,10 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 25
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -745,49 +1001,73 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="40"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 40" class="gux-pagination-buttons-list-target">
-                40
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 40">
+                  40
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -807,8 +1087,10 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 25
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -818,49 +1100,73 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current" disabled="">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target" disabled="">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target" disabled="">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target" disabled="">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target" disabled="">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current" disabled="">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2" disabled="">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3" disabled="">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4" disabled="">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5" disabled="">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button disabled="" totalpages="40"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 40" class="gux-pagination-buttons-list-target" disabled="">
-                40
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 40" disabled="">
+                  40
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -880,8 +1186,10 @@ exports[`gux-pagination #render should render as expected (13) 1`] = `
             <span class="gux-pagination-item-counts-range">
               1 - 25
             </span>
-            <span>
-              of 1,000
+            <span class="gux-pagination-item-counts-total">
+              <span>
+                of 1,000
+              </span>
             </span>
           </div>
         </gux-pagination-item-counts>
@@ -891,49 +1199,73 @@ exports[`gux-pagination #render should render as expected (13) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
-              <button aria-label="Page 2" class="gux-pagination-buttons-list-target">
-                2
-              </button>
-              <button aria-label="Page 3" class="gux-pagination-buttons-list-target">
-                3
-              </button>
-              <button aria-label="Page 4" class="gux-pagination-buttons-list-target">
-                4
-              </button>
-              <button aria-label="Page 5" class="gux-pagination-buttons-list-target">
-                5
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 2">
+                  2
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 3">
+                  3
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 4">
+                  4
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 5">
+                  5
+                </button>
+              </gux-button-slot>
               <gux-pagination-ellipsis-button totalpages="40"></gux-pagination-ellipsis-button>
-              <button aria-label="Page 40" class="gux-pagination-buttons-list-target">
-                40
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 40">
+                  40
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -953,6 +1285,7 @@ exports[`gux-pagination #render should render as expected (14) 1`] = `
             <span class="gux-pagination-item-counts-range">
               0 - 0
             </span>
+            <span class="gux-pagination-item-counts-total"></span>
           </div>
         </gux-pagination-item-counts>
       </div>
@@ -961,33 +1294,47 @@ exports[`gux-pagination #render should render as expected (14) 1`] = `
         <gux-pagination-buttons current-page="1" total-pages="1">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>
@@ -1007,6 +1354,7 @@ exports[`gux-pagination #render should render current page as 1 when total items
             <span class="gux-pagination-item-counts-range">
               0 - 0
             </span>
+            <span class="gux-pagination-item-counts-total"></span>
           </div>
         </gux-pagination-item-counts>
       </div>
@@ -1015,33 +1363,47 @@ exports[`gux-pagination #render should render current page as 1 when total items
         <gux-pagination-buttons current-page="1" total-pages="1">
           <div class="gux-advanced gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="First page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Previous page">
-                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="First page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="First page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Previous page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Previous page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+              </gux-button>
             </div>
             <div class="gux-pagination-buttons-list-container">
-              <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
-                1
-              </button>
+              <gux-button-slot accent="ghost">
+                <button aria-label="Page 1 selected" class="gux-pagination-buttons-list-current">
+                  1
+                </button>
+              </gux-button-slot>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Next page">
-                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
-              <gux-button-slot accent="ghost">
-                <button disabled="" title="Last page">
-                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
-                </button>
-              </gux-button-slot>
+              <gux-button gux-title="Next page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Next page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+              </gux-button>
+              <gux-button gux-title="Last page">
+                <mock:shadow-root>
+                  <button class="gux-ghost gux-icon-only" disabled="" title="Last page" type="button">
+                    <slot></slot>
+                  </button>
+                </mock:shadow-root>
+                <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+              </gux-button>
             </div>
           </div>
         </gux-pagination-buttons>

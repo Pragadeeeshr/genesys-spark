@@ -138,7 +138,8 @@ export class GuxPaginationEllipsisButton {
   render(): JSX.Element {
     return (
       <Host>
-        <button
+        <gux-button
+          accent="ghost"
           id="popover-target"
           type="button"
           disabled={this.disabled}
@@ -151,7 +152,7 @@ export class GuxPaginationEllipsisButton {
             screenreaderText={this.i18n('goToPage')}
             icon-name="fa/ellipsis-regular"
           ></gux-icon>
-        </button>
+        </gux-button>
         <gux-tooltip for="popover-target">
           <div slot="content">{this.i18n('goToPage')}</div>
         </gux-tooltip>
