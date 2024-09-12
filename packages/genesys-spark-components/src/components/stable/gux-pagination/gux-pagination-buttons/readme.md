@@ -33,7 +33,6 @@ An internal component used by the gux-pagination component.
 
 - [gux-button-slot](../../gux-button-slot)
 - [gux-pagination-ellipsis-button](gux-pagination-ellipsis-button)
-- [gux-button](../../gux-button)
 - [gux-icon](../../gux-icon)
 
 ### Graph
@@ -41,7 +40,6 @@ An internal component used by the gux-pagination component.
 graph TD;
   gux-pagination-buttons --> gux-button-slot
   gux-pagination-buttons --> gux-pagination-ellipsis-button
-  gux-pagination-buttons --> gux-button
   gux-pagination-buttons --> gux-icon
   gux-pagination-ellipsis-button --> gux-button
   gux-pagination-ellipsis-button --> gux-icon

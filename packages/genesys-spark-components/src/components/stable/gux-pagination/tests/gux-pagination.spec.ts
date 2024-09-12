@@ -30,8 +30,7 @@ describe('gux-pagination', () => {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 25,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 1,
@@ -44,64 +43,55 @@ describe('gux-pagination', () => {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 50,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 75,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 100,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 25,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 10,
         totalItems: 1000,
         itemsPerPage: 25,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 10,
         totalItems: 1000,
         itemsPerPage: 50,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 10,
         totalItems: 1000,
         itemsPerPage: 75,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 10,
         totalItems: 1000,
         itemsPerPage: 100,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: 1,
         totalItems: 1000,
         itemsPerPage: 25,
-        layout: 'simple',
-        disabled: false
+        layout: 'simple'
       },
       {
         currentPage: 1,
@@ -114,18 +104,19 @@ describe('gux-pagination', () => {
         currentPage: -3,
         totalItems: 1000,
         itemsPerPage: 25,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       },
       {
         currentPage: -3,
         totalItems: 0,
         itemsPerPage: 25,
-        layout: 'advanced',
-        disabled: false
+        layout: 'advanced'
       }
     ].forEach(
-      ({ currentPage, totalItems, itemsPerPage, layout, disabled }, index) => {
+      (
+        { currentPage, totalItems, itemsPerPage, layout, disabled = false },
+        index
+      ) => {
         it(`should render as expected (${index + 1})`, async () => {
           const html = `
           <gux-pagination

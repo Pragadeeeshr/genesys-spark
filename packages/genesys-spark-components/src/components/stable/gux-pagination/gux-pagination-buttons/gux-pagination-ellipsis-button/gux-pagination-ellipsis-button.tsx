@@ -5,7 +5,6 @@ import {
   State,
   h,
   JSX,
-  Host,
   Prop,
   Event,
   EventEmitter,
@@ -83,7 +82,7 @@ export class GuxPaginationEllipsisButton {
   }
 
   @Watch('disabled')
-  watchIsOpen(newValue: boolean): void {
+  watchIsDisabled(newValue: boolean): void {
     if (newValue) {
       this.isOpen = false;
     }
@@ -136,45 +135,43 @@ export class GuxPaginationEllipsisButton {
   }
 
   render(): JSX.Element {
-    return (
-      <Host>
-        <gux-button
-          accent="ghost"
-          id="popover-target"
-          type="button"
-          disabled={this.disabled}
-          ref={el => (this.ellipsisButton = el)}
-          onClick={() => this.toggle()}
-          aria-haspopup="true"
-          aria-expanded={this.isOpen.toString()}
-        >
-          <gux-icon
-            screenreaderText={this.i18n('goToPage')}
-            icon-name="fa/ellipsis-regular"
-          ></gux-icon>
-        </gux-button>
-        <gux-tooltip for="popover-target">
-          <div slot="content">{this.i18n('goToPage')}</div>
-        </gux-tooltip>
-        <gux-popover is-open={this.isOpen} for="popover-target">
-          <span slot="title">{this.i18n('goToPage')}</span>
-          <gux-form-field-number>
-            <input
-              slot="input"
-              type="number"
-              ref={el => (this.inputElement = el)}
-              min="1"
-              max={this.totalPages}
-              value="1"
-              onKeyDown={evt =>
-                ['e', 'E', '+', '-', '.'].includes(evt.key) &&
-                evt.preventDefault()
-              }
-            />
-            <label slot="label"></label>
-          </gux-form-field-number>
-        </gux-popover>
-      </Host>
-    ) as JSX.Element;
+    return [
+      <gux-button
+        accent="ghost"
+        id="popover-target"
+        type="button"
+        disabled={this.disabled}
+        ref={el => (this.ellipsisButton = el)}
+        onClick={() => this.toggle()}
+        aria-haspopup="true"
+        aria-expanded={this.isOpen.toString()}
+      >
+        <gux-icon
+          screenreaderText={this.i18n('goToPage')}
+          icon-name="fa/ellipsis-regular"
+        ></gux-icon>
+      </gux-button>,
+      <gux-tooltip for="popover-target">
+        <div slot="content">{this.i18n('goToPage')}</div>
+      </gux-tooltip>,
+      <gux-popover is-open={this.isOpen} for="popover-target">
+        <span slot="title">{this.i18n('goToPage')}</span>
+        <gux-form-field-number>
+          <input
+            slot="input"
+            type="number"
+            ref={el => (this.inputElement = el)}
+            min="1"
+            max={this.totalPages}
+            value="1"
+            onKeyDown={evt =>
+              ['e', 'E', '+', '-', '.'].includes(evt.key) &&
+              evt.preventDefault()
+            }
+          />
+          <label slot="label"></label>
+        </gux-form-field-number>
+      </gux-popover>
+    ] as JSX.Element;
   }
 }

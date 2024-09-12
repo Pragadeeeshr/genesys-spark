@@ -159,55 +159,63 @@ export class GuxPaginationButtons {
     return (
       <div class={`gux-pagination-buttons-container gux-${this.layout}`}>
         <div class="gux-pagination-buttons-group">
-          <gux-button
-            accent="ghost"
-            gux-title={this.i18n('firstPage')}
-            disabled={this.onFirstPage || this.disabled}
-            onClick={this.handleClickFirst.bind(this)}
-          >
-            <gux-icon
-              decorative
-              icon-name="fa/chevrons-left-regular"
-            ></gux-icon>
-          </gux-button>
-          <gux-button
-            accent="ghost"
-            gux-title={this.i18n('previousPage')}
-            disabled={this.onFirstPage || this.disabled}
-            onClick={this.handleClickPrevious.bind(this)}
-          >
-            <gux-icon
-              decorative
-              icon-name="custom/chevron-left-small-regular"
-            ></gux-icon>
-          </gux-button>
+          <gux-button-slot accent="ghost" icon-only>
+            <button
+              title={this.i18n('firstPage')}
+              disabled={this.onFirstPage || this.disabled}
+              onClick={this.handleClickFirst.bind(this)}
+            >
+              <gux-icon
+                size="small"
+                decorative
+                icon-name="fa/chevrons-left-regular"
+              ></gux-icon>
+            </button>
+          </gux-button-slot>
+          <gux-button-slot accent="ghost" icon-only>
+            <button
+              title={this.i18n('previousPage')}
+              disabled={this.onFirstPage || this.disabled}
+              onClick={this.handleClickPrevious.bind(this)}
+            >
+              <gux-icon
+                size="small"
+                decorative
+                icon-name="custom/chevron-left-small-regular"
+              ></gux-icon>
+            </button>
+          </gux-button-slot>
         </div>
 
         {this.getPageNavigation()}
 
         <div class="gux-pagination-buttons-group">
-          <gux-button
-            accent="ghost"
-            gux-title={this.i18n('nextPage')}
-            disabled={this.onLastPage || this.disabled}
-            onClick={this.handleClickNext.bind(this)}
-          >
-            <gux-icon
-              decorative
-              icon-name="custom/chevron-right-small-regular"
-            ></gux-icon>
-          </gux-button>
-          <gux-button
-            accent="ghost"
-            gux-title={this.i18n('lastPage')}
-            disabled={this.onLastPage || this.disabled}
-            onClick={this.handleClickLast.bind(this)}
-          >
-            <gux-icon
-              decorative
-              icon-name="fa/chevrons-right-regular"
-            ></gux-icon>
-          </gux-button>
+          <gux-button-slot accent="ghost" icon-only>
+            <button
+              title={this.i18n('nextPage')}
+              disabled={this.onLastPage || this.disabled}
+              onClick={this.handleClickNext.bind(this)}
+            >
+              <gux-icon
+                size="small"
+                decorative
+                icon-name="custom/chevron-right-small-regular"
+              ></gux-icon>
+            </button>
+          </gux-button-slot>
+          <gux-button-slot accent="ghost" icon-only>
+            <button
+              title={this.i18n('lastPage')}
+              disabled={this.onLastPage || this.disabled}
+              onClick={this.handleClickLast.bind(this)}
+            >
+              <gux-icon
+                size="small"
+                decorative
+                icon-name="fa/chevrons-right-regular"
+              ></gux-icon>
+            </button>
+          </gux-button-slot>
         </div>
       </div>
     ) as JSX.Element;
