@@ -37,12 +37,10 @@ export function getTimeDisplayValues(
 
 function applyHourBoundaries(
   clockType: GuxClockType,
-  hourOptions: string[],
+  hours: string[],
   min?: string,
   max?: string
 ) {
-  let hours = [...hourOptions];
-
   // TODO: should I validate min and/or max prop's format that's passed in or is that unnecessary?
 
   if (min) {
