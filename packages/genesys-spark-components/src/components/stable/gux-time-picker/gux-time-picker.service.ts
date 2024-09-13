@@ -63,9 +63,9 @@ function applyHourBoundaries(
 }
 
 function formatHour(clockType: GuxClockType, hour: string) {
-  // The 12h clock type will have all "12:xx" hour options at the front of the list so I'm putting a decimal point in front of these so
-  // that when the hour list is converted to numbers then the list will be ordered ascending. We need the hour list in ascending order so that
-  // we can set min/max boundaries if the min and max props are set
+  // The 12h clock type will have all "12:xx" hour options at the front of the list (e.g. 12:00, 12:30, 1:00, 1:30, 2:00, etc)
+  // so I'm putting a decimal point in front of the "12:xx" hour options so that the list can be in numerically ascending order when
+  // it's time to apply min/max boundaries
   return (
     clockType === '12h' && hour.startsWith('12:') ? `.${hour}` : hour
   ).replace(':', '');
