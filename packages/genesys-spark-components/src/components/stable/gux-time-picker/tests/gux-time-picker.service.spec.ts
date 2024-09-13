@@ -332,12 +332,17 @@ describe('gux-time-picker.service', () => {
   });
 
   describe('#getTimeDisplayValues with set boundaries', () => {
-    it(`should work as expected for 24h with 30 minute intervals and boundaries of 11:00-20:00`, async () => {
+    it(`should work as expected for 24h with 30 minute intervals and boundaries of 09:00-20:00`, async () => {
       const minuteInterval = 30;
       const clockType = '24h';
-      const min = '11:00';
+      const min = '08:30';
       const max = '20:00';
       const expectedOutput = [
+        '09:00',
+        '09:30',
+        '10:00',
+        '10:30',
+        '11:00',
         '11:30',
         '12:00',
         '12:30',
