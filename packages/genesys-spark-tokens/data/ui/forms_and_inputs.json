@@ -1635,5 +1635,25 @@
       "value": "{container.sm.gap}",
       "type": "spacing"
     }
+  },
+  "file_upload": {
+    "label_helper": {
+      "gap": {
+        "value": "{container.xs.gap}",
+        "type": "spacing"
+      }
+    },
+    "main_container": {
+      "gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing"
+      }
+    },
+    "file_card": {
+      "gap": {
+        "value": "{container.sm.gap}",
+        "type": "spacing"
+      }
+    }
   }
 }
