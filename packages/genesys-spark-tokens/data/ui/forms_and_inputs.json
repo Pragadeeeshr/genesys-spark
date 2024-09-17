@@ -1650,9 +1650,11 @@
       }
     },
     "file_card": {
-      "gap": {
-        "value": "{container.sm.gap}",
-        "type": "spacing"
+      "card_group": {
+        "gap": {
+          "value": "{container.sm.gap}",
+          "type": "spacing"
+        }
       },
       "file_name": {
         "text": {
@@ -1662,6 +1664,48 @@
         "default": {
           "value": "{foreground.form_control.text_input.populated}",
           "type": "color"
+        }
+      },
+      "error": {
+        "error_message": {
+          "value": "{foreground.form_control.help_text.error}",
+          "type": "color"
+        },
+        "error_helper": {
+          "value": "{foreground.form_control.help_text.default}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{body.sm.regular}",
+          "type": "typography"
+        }
+      },
+      "card": {
+        "padding": {
+          "value": "{container.2xs.gap} {container.sm.gap}",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "{container.xs.gap}",
+          "type": "spacing"
+        },
+        "error_card": {
+          "file_name_section": {
+            "padding": {
+              "value": "0 {container.sm.gap}",
+              "type": "spacing"
+            }
+          },
+          "error_text_section": {
+            "padding": {
+              "value": "0 {container.sm.gap}",
+              "type": "spacing"
+            },
+            "gap": {
+              "value": "{container.xs.gap}",
+              "type": "spacing"
+            }
+          }
         }
       }
     }
