@@ -1708,6 +1708,14 @@
           }
         }
       }
+    },
+    "drag_drop": {
+      "btn_text": {
+        "gap": {
+          "value": "{container.md.gap}",
+          "type": "spacing"
+        }
+      }
     }
   }
 }
