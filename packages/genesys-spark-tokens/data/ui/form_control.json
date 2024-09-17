@@ -306,5 +306,15 @@
         "type": "borderRadius"
       }
     }
+  },
+  "file_upload": {
+    "file_card": {
+      "file_name": {
+        "default": {
+          "value": "{foreground.form_control.text_input.populated}",
+          "type": "color"
+        }
+      }
+    }
   }
 }

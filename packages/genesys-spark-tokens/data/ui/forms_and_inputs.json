@@ -1653,6 +1653,16 @@
       "gap": {
         "value": "{container.sm.gap}",
         "type": "spacing"
+      },
+      "file_name": {
+        "text": {
+          "value": "{body.sm.regular}",
+          "type": "typography"
+        },
+        "default": {
+          "value": "{foreground.form_control.text_input.populated}",
+          "type": "color"
+        }
       }
     }
   }
