@@ -1714,6 +1714,14 @@
         "text": {
           "value": "{body.sm.regular}",
           "type": "typography"
+        },
+        "border": {
+          "value": {
+            "color": "{border.form_control.text_input.default}",
+            "width": "{form_control.text_input.edges.border_width}",
+            "style": "dashed"
+          },
+          "type": "border"
         }
       },
       "drop_zone_text": {
