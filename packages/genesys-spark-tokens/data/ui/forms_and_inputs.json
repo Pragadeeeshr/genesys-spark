@@ -1719,6 +1719,16 @@
         "value": "{elevation.low}",
         "type": "boxShadow",
         "description": "The shadow we used for small-sized components like tooltips."
+      },
+      "status_icon": {
+        "success": {
+          "value": "{color.success.main}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{color.error.main}",
+          "type": "color"
+        }
       }
     },
     "drag_and_drop": {
