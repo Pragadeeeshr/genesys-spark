@@ -1682,7 +1682,7 @@
       },
       "card": {
         "padding": {
-          "value": "{container.2xs.gap} {container.sm.gap}",
+          "value": "{container.2xs.padding} {container.xs.padding}",
           "type": "spacing"
         },
         "gap": {
@@ -1692,13 +1692,13 @@
         "error_card": {
           "file_name_section": {
             "padding": {
-              "value": "0 {container.sm.gap}",
+              "value": "0 {container.xs.padding}",
               "type": "spacing"
             }
           },
           "error_text_section": {
             "padding": {
-              "value": "0 {container.sm.gap}",
+              "value": "0 {container.xs.padding}",
               "type": "spacing"
             },
             "gap": {
