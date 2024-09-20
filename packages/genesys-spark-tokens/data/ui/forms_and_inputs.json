@@ -1707,6 +1707,11 @@
             }
           }
         }
+      },
+      "box_shadow": {
+        "value": "{elevation.low}",
+        "type": "boxShadow",
+        "description": "The shadow we used for small-sized components like tooltips."
       }
     },
     "drag_and_drop": {
