@@ -1208,6 +1208,10 @@
           "value": "{color.error.main}",
           "type": "color"
         }
+      },
+      "foreground_color": {
+        "value": "{foreground.container.high_contrast.high_emphasis}",
+        "type": "color"
       }
     },
     "drop_zone": {
