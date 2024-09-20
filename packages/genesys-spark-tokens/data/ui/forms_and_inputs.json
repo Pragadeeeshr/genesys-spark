@@ -1210,6 +1210,12 @@
         }
       }
     },
+    "drop_zone": {
+      "border_radius": {
+        "value": "{interactive.sm.border_radius}",
+        "type": "borderRadius"
+      }
+    },
     "label_helper": {
       "gap": {
         "value": "{container.xs.gap}",

@@ -1765,6 +1765,7 @@
       "time_picker.focus_ampm.border_radius": "117a190b427b885e6da4a4e83fa4af13bfe44d19",
       "time_picker.focus_time.border_radius": "2f6cce7ce563e699c83c1049c1adb274357f2c62",
       "file_upload.file_card.border_radius": "76115fec5eab57485a2bc152e252072ca97a1c61",
+      "file_upload.drop_zone.border_radius": "b66837b94bfc6b2e550b145e2a3378fb08cba7b0",
       "time_picker.ampm.padding": "ad06a48d817b6ebbe6b996adf6f7d15cbcd41492",
       "color_picker.label.required_symbol_color": "ec5fceefda392462411fb8b705dec77b062fb8a7",
       "color_picker.label.text_color": "08038112047253c3d7f14532ad7fd2b1492caef5",
