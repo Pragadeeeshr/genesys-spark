@@ -488,7 +488,8 @@
       "theme.border_radius.focus.large": "863ebe09eda9ddfb5d3548c123cfed571cf1274c",
       "theme.border_radius.focus.medium": "f2c87579ac1f11a371eb5b6301658e0775da31fa",
       "theme.border_radius.focus.small": "79675ae64f8c132f3956a5861008315ec50541de",
-      "theme.border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354"
+      "theme.border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354",
+      "theme.border.edges.default.00": "a91ba1b7b47a9cf6bf7ef0853234c1867dc2dcfc"
     }
   },
   {
@@ -852,6 +853,7 @@
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
       "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
+      "border.container.edges.default_light": "bb2a37d7619262576d1c47e4ed06e6ba022db8d3",
       "opacity.disabled": "57b30140a548ab8a62a5a54618d391cb8c0e8aeb",
       "opacity.shroud": "1279e7d8432b628af26abdd6657a42e06627835b",
       "interactive.md.size": "8a539dfcb71fd7e0b92035647f128a5deb87562f",
@@ -1762,6 +1764,7 @@
       "time_picker.focus_clock.border_radius": "996d5739fec0760e16f36252c62cd771578a0b38",
       "time_picker.focus_ampm.border_radius": "117a190b427b885e6da4a4e83fa4af13bfe44d19",
       "time_picker.focus_time.border_radius": "2f6cce7ce563e699c83c1049c1adb274357f2c62",
+      "file_upload.file_card.border_radius": "76115fec5eab57485a2bc152e252072ca97a1c61",
       "time_picker.ampm.padding": "ad06a48d817b6ebbe6b996adf6f7d15cbcd41492",
       "color_picker.label.required_symbol_color": "ec5fceefda392462411fb8b705dec77b062fb8a7",
       "color_picker.label.text_color": "08038112047253c3d7f14532ad7fd2b1492caef5",
@@ -1859,6 +1862,8 @@
       "file_upload.file_card.card.error_card.error_text_section.gap": "fc8cfa20077235b42fd5fd6db15ae3b70d8a0b37",
       "file_upload.drag_and_drop.drop_zone_text.color": "6bbf41831edc49caab4991a646bf5f1f000d5b72",
       "file_upload.drag_drop.btn_text.gap": "de1709f03d10fb3c730a0d1ad1ef7c095b645fef",
+      "file_upload.file_card.status_icon.success": "88dcb1d8a7fedf8d3f79fd8ce9f6aa66dc6b4a19",
+      "file_upload.file_card.status_icon.error": "278b5a572109b34503ca08f1c61ce2e1a6bf2e5f",
       "search.counter.default.foreground_color": "e5de080b19affe2ef5e547992204cb36def8159f",
       "search.counter.hover.foreground_color": "f127cad01e368199f1d70db2952b4313b386e758",
       "search.counter.divider.foreground_color": "62ea55cb86ba9e8271103206b8d18be1179f087f",
