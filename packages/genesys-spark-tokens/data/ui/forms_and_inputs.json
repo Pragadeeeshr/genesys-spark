@@ -1705,6 +1705,13 @@
               "value": "{container.xs.gap}",
               "type": "spacing"
             }
+          },
+          "main_container": {
+            "padding": {
+              "value": "{interactive.sm.padding} 0 {interactive.md.padding}",
+              "type": "spacing",
+              "description": "This token is to be updated after the themes release. (There was no appropriate token in the container category and did not want to modify existing ones.)"
+            }
           }
         }
       },
